@@ -51,8 +51,9 @@ gulp.task 'compass', ->
 gulp.task 'browserify', ->
   browserify
     entries: ['./src/scripts/main.coffee']
-    transform: ['coffeeify']
+    transform: ['coffeeify', 'envify']
     extensions: ['.coffee']
+    paths: ['./src/scripts', './node_modules']
     debug: true
   .bundle()
   .pipe source 'main.js'
@@ -74,7 +75,7 @@ gulp.task 'lint', ->
     undefined_variables:
       module: 'coffeelint-undefined-variables'
       level: 'warn'
-      globals: ['window', 'console', 'require', 'module', 'process']
+      globals: ['window', 'console', 'require', 'module', 'process', 'config']
     variable_scope:
       module: 'coffeelint-variable-scope'
       level: 'warn'

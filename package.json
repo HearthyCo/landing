@@ -16,6 +16,7 @@
     "coffeelint-undefined-variables": "0.0.3",
     "coffeelint-variable-scope": "0.0.3",
     "del": "^2.2.0",
+    "envify": "^3.4.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-coffeelint": "^0.6.0",
