@@ -1,0 +1,13 @@
+image: node:6-wheezy
+
+stages:
+  - build
+
+cache:
+  paths:
+  - node_modules/
+
+build_assets:
+  script:
+    - npm install && node_modules/.bin/gulp build
+  stage: build
