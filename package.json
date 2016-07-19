@@ -1,6 +1,6 @@
 {
   "name": "easy-dev",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A simple scaffold to easily develop HTML+Coffeescript+SASS",
   "repository": "https://gitlab.com/anxo/easy-dev.git",
   "main": "index.js",

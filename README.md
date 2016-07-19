@@ -30,3 +30,9 @@ If you just want to generate the distributable files, you can run `gulp build`
 instead.
 
 Happy coding!
+
+## Deployment
+
+This repo is already configured to work with Dokku (or Heroku), so if
+you use it as a scaffold, deploying should be already configured.
+Gitlab CI is ready to use too.
