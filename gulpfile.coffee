@@ -38,7 +38,9 @@ gulp.task 'compass', ->
     css: 'dist/www'
     sass: 'src/styles'
     sourcemap: true
-  .on 'error', (err) -> console.log err
+  .on 'error', (err) ->
+    console.log err
+    @emit 'end'
   .pipe sourcemaps.init loadMaps: true
   .pipe autoprefixer('last 3 version', 'safari 5', 'ie 9',
       'opera 12.1', 'ios 6', 'android 4')
@@ -56,6 +58,9 @@ gulp.task 'browserify', ->
     paths: ['./src/scripts', './node_modules']
     debug: true
   .bundle()
+  .on 'error', (err) ->
+    console.log err.message
+    @emit 'end'
   .pipe source 'main.js'
   .pipe buffer()
   .pipe sourcemaps.init
@@ -87,6 +92,9 @@ gulp.task 'coffee', ['lint', 'browserify']
 gulp.task 'jade', ->
   gulp.src 'src/pages/**/*.jade'
   .pipe jade()
+  .on 'error', (err) ->
+    console.log err.message
+    @emit 'end'
   .pipe gulp.dest 'dist/www/'
   .pipe browserSync.stream()
 
