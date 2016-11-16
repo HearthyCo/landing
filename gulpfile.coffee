@@ -29,7 +29,10 @@ browserSync.use
 
 gulp.task 'browser-sync', ->
   browserSync.init
-    server: './dist/www/'
+    server:
+      baseDir: './dist/www/'
+      serveStaticOptions:
+        extensions: ['html']
 
 # Compass
 gulp.task 'compass', ->
