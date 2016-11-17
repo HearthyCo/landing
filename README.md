@@ -1,6 +1,6 @@
 # Easy-Dev
 A simple scaffold to kickstart your web development projects.
-Powered by Compass, Coffeescript, Jade, and Browsersync.
+Powered by Compass, Coffeescript, Pug, and Browsersync.
 
 ---
 
@@ -20,7 +20,7 @@ Just run `gulp` and a browser window with your page will open, and auto-reload
 with any changes. Source maps will get generated too, for easy debugging.
 
 Your code should go on the following folders:
-  * `src/pages/` for your Jade templates
+  * `src/pages/` for your Pug templates
   * `src/styles/` for your SASS stylesheets
   * `src/scripts/` for your Coffeescript scripts
 

@@ -9,7 +9,7 @@ coffeelint = require 'gulp-coffeelint'
 compass = require 'gulp-compass'
 del = require 'del'
 gulp = require 'gulp'
-jade = require 'gulp-jade'
+pug = require 'gulp-pug'
 minifyCss = require 'gulp-clean-css'
 rename = require 'gulp-rename'
 runSequence = require 'run-sequence'
@@ -91,10 +91,10 @@ gulp.task 'lint', ->
 
 gulp.task 'coffee', ['lint', 'browserify']
 
-# Jade
-gulp.task 'jade', ->
-  gulp.src 'src/pages/**/*.jade'
-  .pipe jade()
+# Pug (ie: Jade)
+gulp.task 'pug', ->
+  gulp.src 'src/pages/**/*.pug'
+  .pipe pug()
   .on 'error', (err) ->
     console.log err.message
     @emit 'end'
@@ -110,12 +110,12 @@ gulp.task 'assets', ->
 # Watch
 gulp.task 'watch', ->
   gulp.watch 'src/styles/**/*', ['compass']
-  gulp.watch 'src/pages/**/*', ['jade']
+  gulp.watch 'src/pages/**/*', ['pug']
   gulp.watch 'src/scripts/**/*', ['coffee']
   gulp.watch 'assets/**/*', ['assets']
 
 # User tasks
 gulp.task 'clean', -> del 'dist/www'
-gulp.task 'build', ['compass', 'coffee', 'jade', 'assets']
+gulp.task 'build', ['compass', 'coffee', 'pug', 'assets']
 gulp.task 'dev', -> runSequence 'build', ['watch', 'browser-sync']
 gulp.task 'default', -> runSequence 'clean', 'dev'
