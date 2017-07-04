@@ -1,0 +1,195 @@
+//----MIXINS----
+
+=bg-image($size, $url)
+  background-image: url($url)
+  background-position: center center
+  background-size: $size
+  background-repeat: no-repeat
+
+=event
+  transition: all 0.25s ease-in-out
+  &:hover, &:active, &:focus
+    @content
+
+=bg-color-hover($baseColor)
+  background-color: $baseColor
+  cursor: pointer
+  @if $baseColor == $white
+    &:hover
+      background-color: $baseColor
+    &:active
+      background-color: tint($red, 60%)
+    &:focus
+      background-color: $baseColor
+  @else
+    &:hover
+      background-color: shade($baseColor, 10%)
+    &:active
+      background-color: shade($baseColor, 10%)
+    &:focus
+      background-color: shade($baseColor, 10%)
+
+=color-hover($baseColor)
+  color: $baseColor
+  transition: color 0.25s ease-in-out
+  &:hover, &:active, &:focus
+    color: shade($baseColor, 25%)
+
+=button-solid($color)
+  box-sizing: border-box
+  border-radius: $base-border-radius
+  padding: 5px 10px
+  display: inline-block
+  background-color: $color
+  border: 1px solid $color
+  font-family: $heading-font-family
+  cursor: pointer
+  transition: all 0.25s ease-in-out
+  &:hover, &:active, &:focus
+    background-color: shade($color, 15%)
+    border-color: shade($color, 15%)
+  @if $color == $white
+    color: $black
+  @else
+    color: $white
+
+=button($color)
+  box-sizing: border-box
+  border-radius: $base-border-radius
+  padding: 5px 10px
+  color: $color
+  border: 1px solid $color
+  display: inline-block
+  background-color: $transparent
+  cursor: pointer
+  transition: all 0.25s ease-in-out
+  font-family: $heading-font-family
+  &:hover, &:active, &:focus
+    background-color: $color
+    @if $color == $white
+      color: $black
+    @else
+      color: $white
+
+=vertical-centre($height)
+  height: $height
+  line-height: $height !important
+  display: inline-block
+  vertical-align: middle
+
+=size($size)
+  height: $size
+  width: $size
+  box-sizing: border-box
+
+=text-border($size, $color)
+  text-shadow: -($size) 0px $color, 0px ($size) $color, ($size) 0px $color, 0px (-($size)) $color
+
+=triangle($direction, $size, $color)
+  height: 0
+  width: 0
+  border-color: transparent
+  border-style: solid
+  border-width: $size / 2
+  @if $direction == up
+    border-bottom-color: $color
+  @else if $direction == right
+    border-left-color: $color
+  @else if $direction == down
+    border-top-color: $color
+  @else if $direction == left
+    border-right-color: $color
+
+=appearance($value)
+  -webkit-appearance: $value
+  -moz-appearance: $value
+  appearance: $value
+
+=placeholder
+  &::-webkit-input-placeholder
+    @content
+
+  &:-moz-placeholder /* Firefox 18- */
+    @content
+
+  &::-moz-placeholder /* Firefox 19+ */
+    @content
+
+  &:-ms-input-placeholder
+    @content
+
+=position($position, $top: null, $right: null, $bottom: null, $left: null)
+  position: $position
+  top: $top
+  right: $right
+  bottom: $bottom
+  left: $left
+
+/// Stripe builder. ex: +stripes(to right, #8e44ad #2c3e50 #2980b9 #16a085 #27ae60)
+=stripes($direction, $colors)
+  $length: length($colors)
+
+  @if $length > 1
+    $stripes: ()
+
+    @for $i from 1 through $length
+      $stripe: (100% / $length) * ($i - 1)
+
+      @if $i > 1
+        $stripes: append($stripes, nth($colors, $i - 1) $stripe, comma)
+
+      $stripes: append($stripes, nth($colors, $i) $stripe, comma)
+
+    background-image: linear-gradient($direction, $stripes)
+  @else if $length == 1
+    background-color: $colors
+
+
+/// Mixin to customize scrollbars. Ex: +scrollbar(.5em, slategray)
+=scrollbar($size, $foreground-color, $background-color: mix($foreground-color, white,  50%))
+  // For Google Chrome
+  ::-webkit-scrollbar
+    width:  $size
+    height: $size
+
+  ::-webkit-scrollbar-thumb
+    background: $foreground-color
+
+  ::-webkit-scrollbar-track
+    background: $background-color
+
+  // For Internet Explorer
+  body
+    scrollbar-face-color: $foreground-color
+    scrollbar-track-color: $background-color
+
+// ------MEDIA QUERIES------
+// the mediaqueries variables are in variables.sass
+
+=mobile
+  @media (max-width: #{$tablet-width})
+    @content
+
+=tablet
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px})
+    @content
+
+=desktop
+  @media (min-width: #{$desktop-width})
+    @content
+
+=wide
+  @media (min-width: #{$wide-width})
+    @content
+
+=extrawide
+  @media (min-width: #{$hd-width})
+    @content
+
+=mobilescreen
+  @media (max-height: #{$mobile-height})
+    @content
+
+=tabletscreen
+  @media (max-height: #{$tablet-width})
+    @content

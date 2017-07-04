@@ -1,13 +1,28 @@
+// ---------0.0 UTF-8---------
+
 @charset "utf-8"
+
+// ---------1.0 Compass---------
+
 @import "compass/css3"
+
+// ---------2.0 Fonts & Icons---------
+
 @import "assets/**/*"
-@import "variables"
 
-/* Your code goes here. */
-body
-  background-color: $white
-  color: $black
-  font-family: $helvetica
+// ---------3.0 Base Template---------
 
-h1
-  text-align: center
+@import "base/variables"
+@import "base/normalize"
+@import "base/mixins"
+@import "base/placeholders"
+@import "base/main"
+
+// ---------4.0 mixins Templates---------
+
+@import "components/**/*"
+
+// ---------5.0 Page Templates---------
+
+@import "pages/**/*"
+
