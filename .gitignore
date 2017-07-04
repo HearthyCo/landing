@@ -1,4 +1,21 @@
-dist
-node_modules
-.sass-cache
+# bundle
 .bundle
+
+# Mac
+.DS_Store
+
+# Node
+node_modules/
+*.log
+*.tmp
+
+# Sass
+.sass-cache
+*.css.map
+
+# Dist files
+dist
+
+# Logs
+logs
+*.log
