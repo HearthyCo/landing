@@ -111,6 +111,7 @@ gulp.task 'assets', ->
 gulp.task 'watch', ->
   gulp.watch 'src/styles/**/*', ['compass']
   gulp.watch 'src/pages/**/*', ['pug']
+  gulp.watch 'src/components/**/*', ['pug']
   gulp.watch 'src/scripts/**/*', ['coffee']
   gulp.watch 'assets/**/*', ['assets']
 
