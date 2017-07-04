@@ -1,8 +1,22 @@
+include ../components/header
+include ../components/footer
+include ../components/analytics
+
 doctype html
-html(lang="en")
+html(lang="es")
   head
-    title Easy-Dev
+    title HearthyCo
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(description='')
+
+    link(rel="shortcut icon", href="/assets/favicon.ico", type="image/x-icon")
     link(href='style.css', rel='stylesheet')
     script(src='main.js')
-  body
-    h1 Your content here!
+    +analytics()
+  body#index-page
+    +header()
+    .container
+      h1 Content here
+    +footer()
