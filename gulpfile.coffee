@@ -78,7 +78,7 @@ gulp.task 'browserify', ->
   .pipe browserSync.stream()
 
 gulp.task 'lint', ->
-  gulp.src 'src/scripts/**/*'
+  gulp.src 'src/scripts/**/*.coffee'
   .pipe coffeelint
     undefined_variables:
       module: 'coffeelint-undefined-variables'
