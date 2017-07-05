@@ -60,14 +60,14 @@ h6
   font-family: $heading-font-family
   font-weight: bold
 h1
-  @extend %font-size-xxl
+  @extend %font-size-xxxl
   font-weight: normal
 h2
-  @extend %font-size-xl
+  @extend %font-size-xxl
 h3
-  @extend %font-size-l
+  @extend %font-size-xl
 h4
-  @extend %font-size-m
+  @extend %font-size-l
 
 a
   color: $action-color
@@ -147,21 +147,20 @@ input:not([type]),
 select[multiple=multiple],
 textarea
   border: none
-  background-color: rgba($white, 0.3)
+  background-color: $light-gray
   outline: none
-  border-radius: $base-border-radius
+  border-radius: $base-border-radius * 10
   box-shadow: none
   box-sizing: border-box
   font-family: $base-font-family
   margin-bottom: $base-spacing / 2
   padding: $base-spacing / 2
   width: 100%
-  color: $white
   transition: background-color 0.3s ease-in-out
   +placeholder
-    color: $white
+    color: $base-font-color
   +event
-    background-color: rgba($white, 0.25)
+    background-color: $medium-gray
 
 textarea
   resize: vertical
