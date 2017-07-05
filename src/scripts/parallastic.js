@@ -1,10 +1,12 @@
-//Compiled code
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var parallastic = exports.parallastic = function parallastic(scrollable) {
+var parallastic = exports.parallastic = function parallastic() {
+  var scrollable = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : window;
+
   var listeners = [];
+  var eventTarget = scrollable;
+  var propertyProvider = scrollable === window ? document.body : scrollable;
 
   var handleScroll = function handleScroll(e) {
     var toRemove = [];
@@ -66,7 +68,7 @@ var parallastic = exports.parallastic = function parallastic(scrollable) {
   var addListener = function addListener(func) {
     listeners.push(func);
     if (listeners.length === 1) {
-      scrollable.addEventListener('scroll', handleScroll);
+      eventTarget.addEventListener('scroll', handleScroll);
     }
     return func;
   };
@@ -75,7 +77,7 @@ var parallastic = exports.parallastic = function parallastic(scrollable) {
     var idx = listeners.indexOf(func);
     if (idx >= 0) listeners.splice(idx, 1);
     if (listeners.length === 0) {
-      scrollable.removeEventListener('scroll', handleScroll);
+      eventTarget.removeEventListener('scroll', handleScroll);
     }
     return func;
   };
@@ -84,7 +86,7 @@ var parallastic = exports.parallastic = function parallastic(scrollable) {
     // Add the listener and return it so it can be removed
     return addListener(function (e) {
       var marker = target.offsetTop;
-      var percent = 1 + (scrollable.scrollTop - marker) / scrollable.clientHeight;
+      var percent = 1 + (propertyProvider.scrollTop - marker) / propertyProvider.clientHeight;
       if (percent >= position) {
         target.classList.add(className);
         return true;
@@ -99,10 +101,10 @@ var parallastic = exports.parallastic = function parallastic(scrollable) {
       var thisYStart = yStart;
       var thisYEnd = yEnd;
       if (opts.units === '%') {
-        thisYStart *= scrollable.clientHeight / 100;
-        thisYEnd *= scrollable.clientHeight / 100;
+        thisYStart *= propertyProvider.clientHeight / 100;
+        thisYEnd *= propertyProvider.clientHeight / 100;
       }
-      var percent = (scrollable.scrollTop - thisYStart) / (thisYEnd - thisYStart);
+      var percent = (propertyProvider.scrollTop - thisYStart) / (thisYEnd - thisYStart);
       if (percent < 0) percent = 0;
       if (percent > 1) percent = 1;
       var value = propertyStart + percent * (propertyEnd - propertyStart);

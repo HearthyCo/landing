@@ -83,7 +83,10 @@ gulp.task 'lint', ->
     undefined_variables:
       module: 'coffeelint-undefined-variables'
       level: 'warn'
-      globals: ['window', 'console', 'require', 'module', 'process', 'config']
+      globals: [
+        'window', 'console', 'require', 'module',
+        'process', 'config', 'document'
+      ]
     variable_scope:
       module: 'coffeelint-variable-scope'
       level: 'warn'
