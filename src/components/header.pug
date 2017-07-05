@@ -1,7 +1,9 @@
 mixin header()
   header#header
     .container
-      img.logo(src="/assets/images/logo.png")
+      picture.logo
+        source(srcset='/assets/images/logo.svg', type='image/svg+xml')
+        img(src='/assets/images/logo.png', alt='logo')
       .talk
         a(href="")
           .icon.icon-car
