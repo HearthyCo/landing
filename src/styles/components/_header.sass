@@ -1,1 +1,33 @@
 #header
+  height: $nav-height
+  background-color: $white
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  +mobile
+    height: $nav-height-mobile
+  .container
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+  .logo
+    +mobile
+      max-width: 150px
+  .talk a
+    display: inline-block
+    margin: 0 5px
+    text-align: center
+    .text
+      font-size: 14px
+      +color-hover($base-font-color)
+    .icon
+      +bg-color-hover($medium-gray)
+      border-radius: 100%
+      +size(43px)
+      color: $white
+      font-size: 32px
+      +mobile
+        +size(30px)
+        font-size: 22px
