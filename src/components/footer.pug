@@ -1,4 +1,17 @@
 mixin footer()
   footer#footer
     .container
-      h4 HearthyCo &reg; 2017
+      picture.logo
+        source(srcset='/assets/images/logo.svg', type='image/svg+xml')
+        img(src='/assets/images/logo.png', alt='logo')
+      .whitepaper
+        h3 Interested in our future crowdsale?
+        form
+          input(type=email, placeholder='Your email')
+          button Download whitepaper
+
+      .links
+        span Hearthy &reg; 2017
+        a(href="") Estatica 1
+        a(href="") Estatica 2
+        a(href="") Estatica 3
