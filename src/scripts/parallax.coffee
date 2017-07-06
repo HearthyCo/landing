@@ -5,12 +5,14 @@ document.addEventListener 'DOMContentLoaded', ->
 
   # p.addToggler document.getElementById('example'), 'active', 0.40
 
-  # p.addProportional document.querySelector('.proof'), 0, 100, 'transform', 100, 600,
-  #   prefix: 'translateY('
-  #   suffix: 'px)'
-  #   units: '%'
+  # p.addProportional document.querySelector('.proof'),
+  #   0, 100, 'transform', 100, 600,
+  #     prefix: 'translateY('
+  #     suffix: 'px)'
+  #     units: '%'
 
-  # p.addProportional document.getElementById('bg'), 0, 100, 'backgroundPosition', 100, 470,
-  #   prefix: 'center '
-  #   suffix: '%'
-  #   units: '%'
+  p.addProportional document.getElementById('bg-particles1'),
+    0, 100, 'backgroundPosition', 0, -150,
+      prefix: 'center '
+      suffix: '%'
+      units: '%'
