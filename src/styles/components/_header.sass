@@ -5,6 +5,7 @@
   top: 0
   left: 0
   right: 0
+  z-index: 10
   +mobile
     height: $nav-height-mobile
   .container
@@ -15,19 +16,26 @@
   .logo
     +mobile
       max-width: 150px
+      padding-top: 5px
   .talk a
     display: inline-block
     margin: 0 5px
     text-align: center
+    +mobile
+      margin: 0
     .text
-      font-size: 14px
+      font-size: $font-size-s
+      font-weight: bold
       +color-hover($base-font-color)
+      margin-top: 3px
+      +mobile
+        display: none
     .icon
       +bg-color-hover(tint($cyan, 30%))
       border-radius: 100%
       +size(43px)
       color: $white
-      font-size: 32px
+      font-size: $font-size-xxl
       +mobile
         +size(30px)
-        font-size: 22px
+        font-size: $font-size-l
