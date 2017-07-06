@@ -27,6 +27,14 @@ section
   padding-top: $nav-height
   +mobile
     padding-top: $nav-height-mobile
+  .split
+    display: flex
+    +mobile
+      flex-direction: column
+    .item
+      flex: 0 0 50%
+      +mobile
+        flex: 0 0 100%
 
 .container
   max-width: $desktop-width
@@ -154,7 +162,7 @@ textarea
   box-sizing: border-box
   font-family: $base-font-family
   margin-bottom: $base-spacing / 2
-  padding: $base-spacing / 2
+  padding: ($base-spacing / 2) $base-spacing
   width: 100%
   transition: background-color 0.3s ease-in-out
   +placeholder
@@ -193,7 +201,7 @@ button, input[type="submit"], a.button
   border: none
   box-sizing: border-box
   cursor: pointer
-  +button($primary-color)
+  +button-gradient($primary-color, $secondary-color)
 
 // ---------ELEMENTS---------
 

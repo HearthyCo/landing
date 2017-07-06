@@ -18,5 +18,22 @@ html(lang="es")
   body#index.page
     +header()
     #content-page
-      .container
+      section#intro
+        #bg-particles1.bg-particles
+        #bg-particles2.bg-particles
+        .container.split
+          .item.left
+            .item-content
+              h1
+                .line
+                  span Universal Digital
+                .line
+                  strong Health Care
+                  span delivered
+              p With Hearthy we want to create a decentralized, open and sustainable ecosystem to improve health care access to everyone, regardless of income, making health care effiicient, agnostic to jurisdiction and user-centered.
+              button.button Download whitepaper
+          .item.right
+            picture#intro-image
+              source(srcset='/assets/images/intro-image.webp', type='image/webp')
+              img(src='/assets/images/intro-image.png', alt='intro image')
     +footer()

@@ -54,6 +54,27 @@
   @else
     color: $white
 
+=button-gradient($color1, $color2)
+  outline: none
+  border-radius: $base-border-radius * 10
+  box-sizing: border-box
+  box-shadow: $shadow
+  padding: ($base-spacing / 2) ($base-spacing *1.5)
+  display: inline-block
+  background-image: linear-gradient(to right,$color2, $color1)
+  font-weight: bold
+  font-family: $heading-font-family
+  cursor: pointer
+  @if $color1 == $white
+    color: $color2
+  @else if $color2 == $white
+    color: $color1
+  @else
+    color: $white
+  +event
+    background-image: linear-gradient(to right, shade($color2, 10%), shade($color1, 10%))
+
+
 =button($color)
   box-sizing: border-box
   border-radius: $base-border-radius * 10
