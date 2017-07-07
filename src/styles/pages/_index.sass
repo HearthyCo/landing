@@ -1,10 +1,13 @@
+$how-image-top-position: 90px
+
 #index
   #content-page
     #intro
-      background-image: linear-gradient(to right,$pink, $orange)
+      background-image: linear-gradient(to right,$secondary-color, $orange)
       width: 100%
       display: flex
       align-items: center
+      overflow: hidden
       color: $white
       min-height: $mobile-height - $nav-height-mobile
       max-height: $desktop-width - $nav-height
@@ -76,3 +79,87 @@
         +bg-image(contain, '/assets/images/featured/health20.png')
       #launchpad
         +bg-image(contain, '/assets/images/featured/launchpad.png')
+    #how
+      background-image: linear-gradient(to right,$primary-color, $secondary-color)
+      color: $white
+      margin-top: $how-image-top-position
+      padding: (2 * $how-image-top-position) 0
+      position: relative
+      +tablet
+        margin-top: $how-image-top-position / 2
+        padding: $how-image-top-position 0
+      +mobile
+        padding: 20px 0
+        margin-top: 0
+      #how-image
+        top: - $how-image-top-position
+        margin-left: - $how-image-top-position / 2
+        position: absolute
+        +tablet
+          width: 250px
+          top: - $how-image-top-position / 2
+          margin-left: 0
+        +mobile
+          display: none
+      #how-title
+        text-align: center
+        margin: 60px 0
+        +mobile
+          margin: 20px 0
+        span
+          &:first-child
+            color: tint($cyan, 75%)
+          &:last-child
+            color: $cyan
+        strong
+          color: tint($cyan, 40%)
+      .item
+        padding: 0 40px
+        +mobile
+          padding: 0
+    #team
+      #team-title
+        +text-gradient(left, $secondary-color, $primary-color)
+        display: inline-block
+        margin: 80px 0
+      .team-wrapper
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        .member
+          flex: 0 0 25%
+          +mobile
+            flex: 0 0 100%
+    #contact
+      background-image: linear-gradient(to right,$secondary-color, $orange)
+      color: $white
+      .melt
+        height: 575px
+        background-image: url('assets/images/bg-melt.png')
+        +mobile
+          height: 100px
+          background-size: contain
+      .container
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 50px 0 150px
+        +tablet
+          padding: 0px 0 100px
+        +mobile
+          padding: 50px 0
+      .logo
+        text-align: center
+        margin: 50px 0
+      .contact-links
+        text-align: center
+        a
+          display: inline-block
+          color: $white
+          padding: 30px 20px
+          +mobile
+            width: 100%
+          .text
+            margin-top: 10px
+
+

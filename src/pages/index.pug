@@ -1,6 +1,7 @@
 include ../components/header
 include ../components/footer
 include ../components/analytics
+include ../components/team
 
 doctype html
 html(lang="es")
@@ -24,7 +25,7 @@ html(lang="es")
         .container.split
           .item.left
             .item-content
-              h1
+              h1#intro-title
                 .line
                   span Universal Digital
                 .line
@@ -33,11 +34,58 @@ html(lang="es")
               p With Hearthy we want to create a decentralized, open and sustainable ecosystem to improve health care access to everyone, regardless of income, making health care effiicient, agnostic to jurisdiction and user-centered.
               button.button Download whitepaper
           .item.right
-            picture#intro-image
-              source(srcset='/assets/images/intro-image.webp', type='image/webp')
-              img(src='/assets/images/intro-image.png', alt='intro image')
+            #intro-image
+              picture
+                source(srcset='/assets/images/intro-image.webp', type='image/webp')
+                img(src='/assets/images/intro-image.png', alt='intro image')
       section#featured
         .container
           .logo#health20
           .logo#launchpad
+      section#how
+        .container
+          #how-image
+            picture
+              source(srcset='/assets/images/how-image.webp', type='image/webp')
+              img(src='/assets/images/how-image.png', alt='how it works section image')
+          h1#how-title
+            span How 
+            strong Hearthy 
+            span works?
+          .split
+            .item.left
+              p With Hearthy we want to create a decentralized, open and sustainable ecosystem to improve health care access to everyone, regardless of income, making health care effiicient, agnostic to jurisdiction and user-centered.
+
+            .item.right
+              p With Hearthy we want to create a decentralized, open and sustainable ecosystem to improve health care access to everyone, regardless of income, making health care effiicient, agnostic to jurisdiction and user-centered.
+
+      section#team
+        .container
+          h1#team-title
+            span The 
+            strong Team
+          .team-wrapper
+            +team()
+
+      section#contact
+        .melt
+        .container
+          .content
+            .logo
+              picture
+                source(srcset='/assets/images/logo2.svg', type='image/svg+xml')
+                img(src='/assets/images/logo2.png', alt='logo')
+              div 2017
+            .contact-links
+              a.link(href="")
+                img(src='/assets/images/icon-slack.png', alt='logo')
+                .text Slack
+              a.link(href="")
+                img(src='/assets/images/icon-redit.png', alt='logo')
+                .text Reddit
+              a.link(href="")
+                img(src='/assets/images/icon-bitcoin.png', alt='logo')
+                .text Bitcoin Talk
+
+
     +footer()

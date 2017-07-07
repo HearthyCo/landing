@@ -1,0 +1,19 @@
+.member
+  display: inline-block
+  text-align: center
+  padding: 20px 10px
+  .member-image
+    +size(230px)
+    background-position: center
+    background-size: cover
+    border-radius: 100%
+    margin: auto
+    +tablet
+      +size(200px)
+    +mobile
+      +size(150px)
+  .name
+    margin: 25px 0 5px
+    +text-gradient(left, $secondary-color, $primary-color)
+  .position
+    font-weight: bold

@@ -1,0 +1,40 @@
+mixin team()
+  -
+    var team = [
+      {
+        name: "Javier Blanco",
+        imageName: "javi",
+        position: "CEO"
+      },{
+        name: "David Conde Sayans",
+        imageName: "david",
+        position: "CCO"
+      },{
+        name: "Juan Sebastián Valencia",
+        imageName: "juan",
+        position: "CMIO"
+      },{
+        name: "Diana D. Reinoso",
+        imageName: "diana",
+        position: "Lead designer"
+      },{
+        name: "Anxo Soto",
+        imageName: "anxo",
+        position: "TBD"
+      },{
+        name: "Alex B. Ferrín",
+        imageName: "alex",
+        position: "Developer"
+      },{
+        name: "César Caride",
+        imageName: "cesar",
+        position: "Developer"
+      }
+    ];
+  mixin member-card(member)
+    .member
+      .member-image(style='background-image: url("/assets/images/team/' + member.imageName + '.jpg")')
+      .name=member.name
+      .position=member.position
+  for member in team
+    +member-card(member)
