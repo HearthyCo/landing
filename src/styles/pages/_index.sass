@@ -26,7 +26,6 @@ $how-image-top-position: 90px
         +bg-image(inherit, '/assets/images/particles/bg-particles1.png')
       #bg-particles2
         +bg-image(cover, '/assets/images/particles/bg-particles2.png')
-
       .split
         position: relative
       .item
@@ -79,6 +78,10 @@ $how-image-top-position: 90px
         +bg-image(contain, '/assets/images/featured/health20.png')
       #launchpad
         +bg-image(contain, '/assets/images/featured/launchpad.png')
+    #explanation-title
+      display: inline-block
+      .line
+        +text-gradient(left, $secondary-color, $primary-color)
     #how
       background-image: linear-gradient(to right,$primary-color, $secondary-color)
       color: $white
@@ -161,5 +164,3 @@ $how-image-top-position: 90px
             width: 100%
           .text
             margin-top: 10px
-
-
