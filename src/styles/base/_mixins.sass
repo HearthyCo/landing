@@ -35,6 +35,18 @@
   &:hover, &:active, &:focus
     color: shade($baseColor, 25%)
 
+=text-gradient($direction, $first-color, $second-color)
+  color: $first-color
+  background: linear-gradient($direction,$first-color, $second-color)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  @media screen\0
+    /* Tus estilos CSS para IE8, IE9, IE10  */
+    -webkit-text-fill-color: $first-color
+    color: $first-color
+    background: none
+
+
 =button-solid($color)
   box-sizing: border-box
   border-radius: $base-border-radius * 10
