@@ -12,7 +12,7 @@ document.addEventListener 'DOMContentLoaded', ->
   #     units: '%'
 
   p.addProportional document.getElementById('bg-particles1'),
-    0, 100, 'backgroundPosition', 0, -150,
+    0, 100, 'backgroundPosition', 50, -150,
       prefix: 'center '
       suffix: '%'
       units: '%'
