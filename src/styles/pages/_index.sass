@@ -11,11 +11,12 @@ $how-image-top-position: 90px
       color: $white
       min-height: $mobile-height - $nav-height-mobile
       max-height: $desktop-width - $nav-height
-      height: calc(100vh - 2*(#{$nav-height}))
+      height: calc(100vh - 2 * (#{$nav-height}))
       position: relative
+      z-index: 1
       +mobile
         max-height: $desktop-width - $nav-height-mobile
-        height: calc(100vh - 2*(#{$nav-height-mobile}))
+        height: calc(100vh - 2 * (#{$nav-height-mobile}))
       .bg-particles
         position: absolute
         top: 0
@@ -51,16 +52,26 @@ $how-image-top-position: 90px
             padding-right: 0
         button
           margin-top: 20px
-        #intro-image
+        #intro-layers
           display: block
           height: 100%
-          img
-            display: block
-            margin-left: auto
-            margin-right: 0
+          .layer
+            position: absolute
+            right: 0
             +mobile
               display: none
+          #layer-1
+            animation: layers-appear 0.5s ease-in-out both
+            animation-delay: 0.6s
+          #layer-2
+            animation: layers-appear 0.5s ease-in-out both
+            animation-delay: 0.3s
+          #layer-3
+            animation: layers-appear 0.5s ease-in-out both
     #featured
+      position: relative
+      z-index: 1
+      background-color: $white
       .container
         height: $nav-height
         background-color: $white
@@ -78,16 +89,72 @@ $how-image-top-position: 90px
         +bg-image(contain, '/assets/images/featured/health20.png')
       #launchpad
         +bg-image(contain, '/assets/images/featured/launchpad.png')
-    #explanation-title
-      display: inline-block
-      .line
-        +text-gradient(left, $secondary-color, $primary-color)
+    #explanation
+      min-height: 100vh
+      background-color: $white
+      #explanation-title
+        top: 60px
+        opacity: 0
+        transition: opacity 1s ease-in-out
+        +mobile
+          position: inherit
+          opacity: 1
+        &.active
+          opacity: 1
+          position: fixed
+          +mobile
+            position: inherit
+      #issues
+        height: 100%
+        position: relative
+        transition: opacity 1s ease-in-out
+      .issue
+        display: flex
+        height: 110vh
+        align-items: center
+        +mobile
+          height: auto
+      .text
+        opacity: 0
+        transition: opacity 0.3s ease-in-out
+        &.appear
+          opacity: 1
+          &.disappear
+            opacity: 0
+      .item.right
+        overflow: hidden
+        position: fixed
+        top: 0
+        right: 0
+        left: 55%
+        bottom: 0
+        display: flex
+        justify-content: center
+        flex-flow: column
+        +mobile
+          position: inherit
+      .animation
+        height: $tablet-width
+        opacity: 0
+      #animation-1
+        +bg-image(contain, '/assets/images/animations/animation-1.png')
+      #animation-2
+        +bg-image(contain, '/assets/images/animations/animation-2.png')
+      #animation-3
+        +bg-image(contain, '/assets/images/animations/animation-3.png')
+      #animation-4
+        +bg-image(contain, '/assets/images/animations/animation-4.png')
+      #explanation-title
+        display: inline-block
+        .line
+          +text-gradient(left, $secondary-color, $primary-color)
     #how
       background-image: linear-gradient(to right,$primary-color, $secondary-color)
       color: $white
       margin-top: $how-image-top-position
       padding: (2 * $how-image-top-position) 0
       position: relative
+      z-index: 1
       +tablet
         margin-top: $how-image-top-position / 2
         padding: $how-image-top-position 0
@@ -106,7 +173,7 @@ $how-image-top-position: 90px
           display: none
       #how-title
         text-align: center
-        margin: 60px 0
+        margin: 100px 0
         +mobile
           margin: 20px 0
         span
@@ -121,6 +188,8 @@ $how-image-top-position: 90px
         +mobile
           padding: 0
     #team
+      position: relative
+      background-color: $white
       #team-title
         +text-gradient(left, $secondary-color, $primary-color)
         display: inline-block
@@ -136,6 +205,7 @@ $how-image-top-position: 90px
     #contact
       background-image: linear-gradient(to right,$secondary-color, $orange)
       color: $white
+      position: relative
       .melt
         height: 575px
         background-image: url('assets/images/bg-melt.png')
@@ -164,3 +234,11 @@ $how-image-top-position: 90px
             width: 100%
           .text
             margin-top: 10px
+
+@keyframes layers-appear
+  from
+    bottom: -300px
+    opacity: 0
+  to
+    bottom: 0
+    opacity: 1

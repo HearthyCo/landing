@@ -34,22 +34,67 @@ html(lang="es")
               p With Hearthy we want to create a decentralized, open and sustainable ecosystem to improve health care access to everyone, regardless of income, making health care effiicient, agnostic to jurisdiction and user-centered.
               button.button Download whitepaper
           .item.right
-            #intro-image
-              picture
-                source(srcset='/assets/images/intro-image.webp', type='image/webp')
-                img(src='/assets/images/intro-image.png', alt='intro image')
+            #intro-layers
+              picture#layer-3.layer
+                source(srcset='/assets/images/intro-layers/layer-3.webp', type='image/webp')
+                img(src='/assets/images/intro-layers/layer-3.png', alt='intro image layer 3')
+              picture#layer-2.layer
+                source(srcset='/assets/images/intro-layers/layer-2.webp', type='image/webp')
+                img(src='/assets/images/intro-layers/layer-2.png', alt='intro image layer 2')
+              picture#layer-1.layer
+                source(srcset='/assets/images/intro-layers/layer-1.webp', type='image/webp')
+                img(src='/assets/images/intro-layers/layer-1.png', alt='intro image layer 1')
       section#featured
         .container
           .logo#health20
           .logo#launchpad
       section#explanation
-        .container
-          h1#explanation-title
-            .line
-              span What problems
-            .line
-              strong Hearhty 
-              span solves?
+        #fixed-content
+          .container
+            h1#explanation-title
+              .line
+                span What problems
+              .line
+                strong Hearhty 
+                span solves?
+            #issues
+              #issue-1.issue
+                .split
+                  .item.left
+                    #text-1.text
+                      h3 Economic access to healthcare 
+                      p Reducing intermediation costs and the medical time in each visit and having an access to a more consistent PHR could provide a more economic access to health care. 
+                      p The creation of an open source ecosystem will make it easier for an underdeveloped health system to join our project. 
+                      p All our project is open source, and all the developments made under its umbrella will be, no onboarding by health systems will be easylnstalling actual PHR is quite expensive, some of the rising economies don't have enough resources to implement proprietary technologies which leads them to buy or create Low-Level non-in-teroperable systems.
+                  .item.right
+                    .animation#animation-1
+              #issue-2.issue
+                .split
+                  .item.left
+                    #text-2.text
+                      h3 Empowering patients 
+                      p By own and control their clinical records a. by having medical services agnostic of their jurisdiction we can empower patients. boosting self-aware a. self-care, automated agents las described later) can be a huge plus here. it Recent study (2) show that auto-mated agents linked can have great clinical outcomes.
+                      p Other study (3) also suggest that allowing patients to record their symptoms on web based interface generate better survival rates on certain types of cancer. generating more survival rate than actual medication.
+                  .item.right
+                    .animation#animation-2
+              #issue-3.issue
+                .split
+                  .item.left
+                    #text-3.text
+                      h3 Ownership of data and user centric KYC
+                      p We give the owner of the data total control over his or her information. The owners can control who gets access to their data, the reason for it and what kind of data they want to obtain. Sharing data with providers and researchers can generate benefits for the users, in form of tokens or cash back in premiums. We will create a system which, by design, ensures the users that the clinical data cannot be used against them. In order to do that, we will provide a dashboard of control that not only will allow the user to control who has access to the data but why. 
+                      p Furthermore, we will increase health literacy among our users hence providing the right tools for them to make informed decisions about the data they share.
+                  .item.right
+                    .animation#animation-3
+              #issue-4.issue
+                .split
+                  .item.left
+                    #text-4.text
+                      h3 Proof of identity
+                      p We manage the third problem when it comes to PHRs. There are 1,500 million unidentified  people in the World. How can we grant them the right to health care if they cannot prove their identity? With biometric and signature based protection we can create a unique ID for every user, without depending on any jurisdiction or health service, all the rest of identification will be constructed on an additional layer, or combined with other services, such as CIVIC.
+                      p Also our PHR can be exported, printed or shared just by the user.The data belong to the patient, not to an institution, a State or even us
+                  .item.right
+                    .animation#animation-4
       section#how
         .container
           #how-image
@@ -62,10 +107,11 @@ html(lang="es")
             span works?
           .split
             .item.left
-              p With Hearthy we want to create a decentralized, open and sustainable ecosystem to improve health care access to everyone, regardless of income, making health care effiicient, agnostic to jurisdiction and user-centered.
+              p Reducing intermediation costs and the medical time in each and having an access to a more consistent PHR could provide a more economic access to health care. 
+              p The creation of an open source ecosystem will make it easier underdeveloped health system to join our project.
 
             .item.right
-              p With Hearthy we want to create a decentralized, open and sustainable ecosystem to improve health care access to everyone, regardless of income, making health care effiicient, agnostic to jurisdiction and user-centered.
+              p All our project is open source, and all the development made under its umbrella will be, so onboarding by health systems will be easy. Installing actual PHR is quite expensive, some of the rising economies don't have enough resources to implement propietary technologies which leads them to buy or create low-level non-interoperable systems.
       section#team
         .container
           h1#team-title
