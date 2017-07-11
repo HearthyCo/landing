@@ -82,14 +82,16 @@ var parallastic = exports.parallastic = function parallastic() {
     return func;
   };
 
-  var addToggler = function addToggler(target, className, position) {
+  var addToggler = function addToggler(target, className, position, reverse) {
     // Add the listener and return it so it can be removed
     return addListener(function (e) {
-      var marker = target.offsetTop;
-      var percent = 1 + (propertyProvider.scrollTop - marker) / propertyProvider.clientHeight;
+      var delta = target.getBoundingClientRect().top;
+      var percent = 1 - delta / propertyProvider.clientHeight;
       if (percent >= position) {
         target.classList.add(className);
-        return true;
+        return !reverse;
+      } else if (reverse) {
+        target.classList.remove(className);
       }
     });
   };
