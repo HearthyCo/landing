@@ -22,6 +22,16 @@ html(lang="es")
       section#intro
         #bg-particles1.bg-particles
         #bg-particles2.bg-particles
+        .particles
+          picture#particle-4.particle
+            source(srcset='/assets/images/particles/particle-4.webp', type='image/webp')
+            img(src='/assets/images/particles/particle-4.png', alt='partilcle')
+          picture#particle-3.particle
+            source(srcset='/assets/images/particles/particle-3.webp', type='image/webp')
+            img(src='/assets/images/particles/particle-3.png', alt='partilcle')
+          picture#particle-2.particle
+            source(srcset='/assets/images/particles/particle-2.webp', type='image/webp')
+            img(src='/assets/images/particles/particle-2.png', alt='partilcle')
         .container.split
           .item.left
             .item-content
@@ -44,6 +54,10 @@ html(lang="es")
               picture#layer-1.layer
                 source(srcset='/assets/images/intro-layers/layer-1.webp', type='image/webp')
                 img(src='/assets/images/intro-layers/layer-1.png', alt='intro image layer 1')
+        .particles
+          picture#particle-1.particle
+            source(srcset='/assets/images/particles/particle-1.webp', type='image/webp')
+            img(src='/assets/images/particles/particle-1.png', alt='partilcle')
       section#featured
         .container
           .logo#health20
@@ -95,6 +109,15 @@ html(lang="es")
                       p Also our PHR can be exported, printed or shared just by the user.The data belong to the patient, not to an institution, a State or even us
                   .item.right
                     .animation#animation-4
+              #issue-5.issue
+                .split
+                  .item.left
+                    #text-5.text
+                      h3 Open Research
+                      p Accessing health data can be tough for researchers, but it can be improved by creating an  aggregated anonymized repository of medical data which can give researchers and developers tools to create predictive models, population health apps...
+                      p Our repository will be open to everyone, and every individual can give access to their anonymized data if they want, just by telling the user why they want the data and who they are. Users can also be rewarded for sharing their medical data.
+                  .item.right
+                    .animation#animation-5
       section#how
         .container
           #how-image

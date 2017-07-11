@@ -27,6 +27,22 @@ $how-image-top-position: 90px
         +bg-image(inherit, '/assets/images/particles/bg-particles1.png')
       #bg-particles2
         +bg-image(cover, '/assets/images/particles/bg-particles2.png')
+      .particle
+        position: absolute
+      #particle-4
+        left: 60%
+        top: 10%
+      #particle-3
+        left: 40%
+        top: 80%
+      #particle-2
+        left: 0%
+        top: 30%
+      #particle-1
+        right: 0%
+        bottom: 10%
+        +mobile
+          opacity: 0.25
       .split
         position: relative
       .item
@@ -40,17 +56,24 @@ $how-image-top-position: 90px
           flex-basis: 65%
           +tablet
             flex-basis: 50%
+        .line
+          animation: layers-appear 0.5s ease-in-out both
+          animation-delay: 0.3s
         strong
           margin-right: 0.2em
           display: block
           +desktop
             display: inline
         p
+          animation: layers-appear 0.5s ease-in-out both
+          animation-delay: 0.6s
           padding-right: 20px
           line-height: 1.7em
           +mobile
             padding-right: 0
         button
+          animation: layers-appear 0.5s ease-in-out both
+          animation-delay: 0.9s
           margin-top: 20px
         #intro-layers
           display: block
@@ -58,16 +81,24 @@ $how-image-top-position: 90px
           .layer
             position: absolute
             right: 0
+            img
+              margin: 0 0 auto auto
+              display: block
+              +tablet
+                margin-top: 10%
             +mobile
               display: none
+            +tablet
+              +size(70%)
           #layer-1
             animation: layers-appear 0.5s ease-in-out both
-            animation-delay: 0.6s
+            animation-delay: 1.6s
           #layer-2
             animation: layers-appear 0.5s ease-in-out both
-            animation-delay: 0.3s
+            animation-delay: 1.3s
           #layer-3
             animation: layers-appear 0.5s ease-in-out both
+            animation-delay: 1s
     #featured
       position: relative
       z-index: 1
@@ -92,18 +123,6 @@ $how-image-top-position: 90px
     #explanation
       min-height: 100vh
       background-color: $white
-      #explanation-title
-        top: 60px
-        opacity: 0
-        transition: opacity 1s ease-in-out
-        +mobile
-          position: inherit
-          opacity: 1
-        &.active
-          opacity: 1
-          position: fixed
-          +mobile
-            position: inherit
       #issues
         height: 100%
         position: relative
@@ -114,15 +133,35 @@ $how-image-top-position: 90px
         align-items: center
         +mobile
           height: auto
+        .split
+          &.ease-in
+            .text
+              opacity: 1
+            .animation
+              transform: translateX(0%)
+              opacity: 1
+            #animation-1
+              animation-name: playFirstAnimation
+            #animation-2
+              animation-name: playSecondAnimation
+            #animation-3
+              animation-name: playThirdAnimation
+            #animation-4
+              animation-name: playFourthAnimation
+            #animation-5
+              animation-name: playFifthAnimation
+          &.ease-out
+            .text
+              opacity: 0
+            .animation
+              transform: translateX(100%)
+              opacity: 0
       .text
         opacity: 0
-        transition: opacity 0.3s ease-in-out
-        &.appear
+        transition: opacity 0.25s ease-in-out
+        +mobile
           opacity: 1
-          &.disappear
-            opacity: 0
       .item.right
-        overflow: hidden
         position: fixed
         top: 0
         right: 0
@@ -134,16 +173,44 @@ $how-image-top-position: 90px
         +mobile
           position: inherit
       .animation
-        height: $tablet-width
+        overflow: hidden
+        background-repeat: no-repeat
+        background-position: left center
+        height: 650px
+        transition: all 0.5s ease-in-out
+        transform: translateX(100%)
         opacity: 0
+        animation-duration: 4s
+        animation-timing-function: steps(32)
+        animation-fill-mode: forwards
+        -webkit-animation-fill-mode: forwards
+        +mobile
+          display: none
       #animation-1
-        +bg-image(contain, '/assets/images/animations/animation-1.png')
+        background-image: url('/assets/images/animations/animation-1.png')
+        width: 592px
+        +tablet
+          background-image: url('/assets/images/animations/illustration-1.png')
       #animation-2
-        +bg-image(contain, '/assets/images/animations/animation-2.png')
+        background-image: url('/assets/images/animations/animation-2.png')
+        width: 591px
+        +tablet
+          background-image: url('/assets/images/animations/illustration-2.png')
       #animation-3
-        +bg-image(contain, '/assets/images/animations/animation-3.png')
+        background-image: url('/assets/images/animations/animation-3.png')
+        width: 549px
+        +tablet
+          background-image: url('/assets/images/animations/illustration-3.png')
       #animation-4
-        +bg-image(contain, '/assets/images/animations/animation-4.png')
+        background-image: url('/assets/images/animations/animation-4.png')
+        width: 388px
+        +tablet
+          background-image: url('/assets/images/animations/illustration-4.png')
+      #animation-5
+        background-image: url('/assets/images/animations/animation-5.png')
+        width: 571px
+        +tablet
+          background-image: url('/assets/images/animations/illustration-5.png')
       #explanation-title
         display: inline-block
         .line
@@ -209,6 +276,7 @@ $how-image-top-position: 90px
       .melt
         height: 575px
         background-image: url('assets/images/bg-melt.png')
+        margin-top: -1px
         +mobile
           height: 100px
           background-size: contain
@@ -237,8 +305,39 @@ $how-image-top-position: 90px
 
 @keyframes layers-appear
   from
-    bottom: -300px
+    top: 300px
     opacity: 0
   to
-    bottom: 0
+    top: 0
     opacity: 1
+
+@keyframes playFirstAnimation
+  0%
+    background-position: left center
+  100%
+    background-position: -18944px center
+
+@keyframes playSecondAnimation
+  0%
+    background-position: left center
+  100%
+    background-position: -18912px center
+
+@keyframes playThirdAnimation
+  0%
+    background-position: left center
+  100%
+    background-position: -17568px center
+
+@keyframes playFourthAnimation
+  0%
+    background-position: left center
+  100%
+    background-position: -12416px center
+
+@keyframes playFifthAnimation
+  0%
+    background-position: left center
+  100%
+    background-position: -18272px center
+
