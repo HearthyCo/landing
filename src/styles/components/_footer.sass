@@ -2,23 +2,38 @@
   padding: 40px 0
   background-color: $white
   position: relative
+  +mobile
+    text-align: center
   .logo
     display: block
   .whitepaper
-    h3
+    h2
       margin-right: 20px
       +text-gradient(left, $secondary-color, $primary-color)
-    form, h3, input, button
+    form, h2, input, button
       display: inline-block
       width: auto
       vertical-align: middle
+    form
       input
         border-top-right-radius: 0
         border-bottom-right-radius: 0
         margin: 0
+        min-width: 400px
+        +mobile
+          min-width: 100%
+          // border-top-left-radius: 0
+          // border-bottom-left-radius: 0
+          border-top-right-radius: 50px
+          border-bottom-right-radius: 50px
+          text-align: center
       button
         border-top-left-radius: 0
         border-bottom-left-radius: 0
+        +mobile
+          border-top-left-radius: 50px
+          border-bottom-left-radius: 50px
+          margin: 10px auto
   .links
     padding: 20px 0 0
     span
