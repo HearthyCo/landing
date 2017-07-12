@@ -135,10 +135,7 @@ $how-image-top-position: 90px
           height: auto
         .split
           &.ease-in
-            .text
-              opacity: 1
-            .animation
-              transform: translateX(0%)
+            .item.right
               opacity: 1
             #animation-1
               animation-name: playFirstAnimation
@@ -151,16 +148,8 @@ $how-image-top-position: 90px
             #animation-5
               animation-name: playFifthAnimation
           &.ease-out
-            .text
+            .item.right
               opacity: 0
-            .animation
-              transform: translateX(100%)
-              opacity: 0
-      .text
-        opacity: 0
-        transition: opacity 0.25s ease-in-out
-        +mobile
-          opacity: 1
       .item.right
         position: fixed
         top: 0
@@ -170,6 +159,11 @@ $how-image-top-position: 90px
         display: flex
         justify-content: center
         flex-flow: column
+        transition: all 0.5s ease-in-out
+        opacity: 0
+        +tablet
+          left: auto
+          width: 45%
         +mobile
           position: inherit
       .animation
@@ -177,40 +171,41 @@ $how-image-top-position: 90px
         background-repeat: no-repeat
         background-position: left center
         height: 650px
-        transition: all 0.5s ease-in-out
-        transform: translateX(100%)
-        opacity: 0
-        animation-duration: 4s
-        animation-timing-function: steps(32)
-        animation-fill-mode: forwards
-        -webkit-animation-fill-mode: forwards
+        animation-duration: 2s
+        animation-timing-function: steps(31)
+        animation-fill-mode: both
         +mobile
           display: none
       #animation-1
         background-image: url('/assets/images/animations/animation-1.png')
         width: 592px
         +tablet
-          background-image: url('/assets/images/animations/illustration-1.png')
+          +bg-image(contain,'/assets/images/animations/illustration-1.png')
+          animation: none
       #animation-2
         background-image: url('/assets/images/animations/animation-2.png')
         width: 591px
         +tablet
-          background-image: url('/assets/images/animations/illustration-2.png')
+          +bg-image(contain,'/assets/images/animations/illustration-2.png')
+          animation: none
       #animation-3
         background-image: url('/assets/images/animations/animation-3.png')
         width: 549px
         +tablet
-          background-image: url('/assets/images/animations/illustration-3.png')
+          +bg-image(contain,'/assets/images/animations/illustration-3.png')
+          animation: none
       #animation-4
         background-image: url('/assets/images/animations/animation-4.png')
         width: 388px
         +tablet
-          background-image: url('/assets/images/animations/illustration-4.png')
+          +bg-image(contain,'/assets/images/animations/illustration-4.png')
+          animation: none
       #animation-5
         background-image: url('/assets/images/animations/animation-5.png')
         width: 571px
         +tablet
-          background-image: url('/assets/images/animations/illustration-5.png')
+          +bg-image(contain,'/assets/images/animations/illustration-5.png')
+          animation: none
       #explanation-title
         display: inline-block
         .line
@@ -315,29 +310,29 @@ $how-image-top-position: 90px
   0%
     background-position: left center
   100%
-    background-position: -18944px center
+    background-position: -18352px center
 
 @keyframes playSecondAnimation
   0%
     background-position: left center
   100%
-    background-position: -18912px center
+    background-position: -18330px center
 
 @keyframes playThirdAnimation
   0%
     background-position: left center
   100%
-    background-position: -17568px center
+    background-position: -17019px center
 
 @keyframes playFourthAnimation
   0%
     background-position: left center
   100%
-    background-position: -12416px center
+    background-position: -12028px center
 
 @keyframes playFifthAnimation
   0%
     background-position: left center
   100%
-    background-position: -18272px center
+    background-position: -17701px center
 
