@@ -19,8 +19,9 @@
       padding-top: 5px
   .talk a
     display: inline-block
-    margin: 0 5px
     text-align: center
+    +desktop
+      min-width: 70px
     +mobile
       margin: 0
     .text
@@ -33,9 +34,16 @@
     .icon
       +bg-color-hover(tint($cyan, 30%))
       border-radius: 100%
+      margin: auto
       +size(43px)
-      color: $white
-      font-size: $font-size-xxl
+      background-repeat: no-repeat
+      background-position: center
       +mobile
         +size(30px)
-        font-size: $font-size-l
+      &.slack
+        background-image: url('/assets/images/header-slack.png')
+      &.reddit
+        background-image: url('/assets/images/header-reddit.png')
+      &.bitcoin
+        background-image: url('/assets/images/header-bitcoin.png')
+
