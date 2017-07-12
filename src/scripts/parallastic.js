@@ -100,12 +100,16 @@ var parallastic = exports.parallastic = function parallastic() {
     var opts = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : {};
 
     return addListener(function (e) {
+      var ref = opts.ref || propertyProvider;
       var thisYStart = yStart;
       var thisYEnd = yEnd;
       if (opts.units === '%') {
-        thisYStart *= propertyProvider.clientHeight / 100;
-        thisYEnd *= propertyProvider.clientHeight / 100;
+        thisYStart *= ref.clientHeight / 100;
+        thisYEnd *= ref.clientHeight / 100;
       }
+      thisYStart += ref.offsetTop;
+      thisYEnd += ref.offsetTop;
+      if (opts.ref) thisYStart -= propertyProvider.clientHeight;
       var percent = (propertyProvider.scrollTop - thisYStart) / (thisYEnd - thisYStart);
       if (percent < 0) percent = 0;
       if (percent > 1) percent = 1;

@@ -20,16 +20,16 @@ html(lang="es")
     +header()
     #content-page
       section#intro
-        #bg-particles1.bg-particles
-        #bg-particles2.bg-particles
+        #bg-intro-particles1.bg-particles
+        #bg-intro-particles2.bg-particles
         .particles
-          picture#particle-4.particle
+          picture#intro-particle-4.particle
             source(srcset='/assets/images/particles/particle-4.webp', type='image/webp')
             img(src='/assets/images/particles/particle-4.png', alt='partilcle')
-          picture#particle-3.particle
+          picture#intro-particle-3.particle
             source(srcset='/assets/images/particles/particle-3.webp', type='image/webp')
             img(src='/assets/images/particles/particle-3.png', alt='partilcle')
-          picture#particle-2.particle
+          picture#intro-particle-2.particle
             source(srcset='/assets/images/particles/particle-2.webp', type='image/webp')
             img(src='/assets/images/particles/particle-2.png', alt='partilcle')
         .container.split
@@ -55,7 +55,7 @@ html(lang="es")
                 source(srcset='/assets/images/intro-layers/layer-1.webp', type='image/webp')
                 img(src='/assets/images/intro-layers/layer-1.png', alt='intro image layer 1')
         .particles
-          picture#particle-1.particle
+          picture#intro-particle-1.particle
             source(srcset='/assets/images/particles/particle-1.webp', type='image/webp')
             img(src='/assets/images/particles/particle-1.png', alt='partilcle')
       section#featured
@@ -133,13 +133,33 @@ html(lang="es")
             .item.right
               p All our project is open source, and all the development made under its umbrella will be, so onboarding by health systems will be easy. Installing actual PHR is quite expensive, some of the rising economies don't have enough resources to implement propietary technologies which leads them to buy or create low-level non-interoperable systems.
       section#team
+        .particles
+          picture#team-particle-4.particle
+            source(srcset='/assets/images/particles/particle-4.webp', type='image/webp')
+            img(src='/assets/images/particles/particle-4.png', alt='partilcle')
+          picture#team-particle-3.particle
+            source(srcset='/assets/images/particles/particle-3.webp', type='image/webp')
+            img(src='/assets/images/particles/particle-3.png', alt='partilcle')
+        .coins
+          picture#team-coin-4.coin
+            source(srcset='/assets/images/particles/coin-4.webp', type='image/webp')
+            img(src='/assets/images/particles/coin-4.png', alt='coin')
+          picture#team-coin-3.coin
+            source(srcset='/assets/images/particles/coin-3.webp', type='image/webp')
+            img(src='/assets/images/particles/coin-3.png', alt='coin')
         .container
           h1#team-title
             span The 
             strong Team
           .team-wrapper
             +team()
-
+        .coins
+          picture#team-coin-2.coin
+            source(srcset='/assets/images/particles/coin-2.webp', type='image/webp')
+            img(src='/assets/images/particles/coin-2.png', alt='coin')
+          picture#team-coin-1.coin
+            source(srcset='/assets/images/particles/coin-1.webp', type='image/webp')
+            img(src='/assets/images/particles/coin-1.png', alt='coin')
       section#contact
         .melt
         .container

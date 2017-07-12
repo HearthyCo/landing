@@ -23,22 +23,22 @@ $how-image-top-position: 90px
         bottom: 0
         right: 0
         left: 0
-      #bg-particles1
+      #bg-intro-particles1
         +bg-image(inherit, '/assets/images/particles/bg-particles1.png')
-      #bg-particles2
+      #bg-intro-particles2
         +bg-image(cover, '/assets/images/particles/bg-particles2.png')
       .particle
         position: absolute
-      #particle-4
+      #intro-particle-4
         left: 60%
         top: 10%
-      #particle-3
+      #intro-particle-3
         left: 40%
         top: 80%
-      #particle-2
+      #intro-particle-2
         left: 0%
         top: 30%
-      #particle-1
+      #intro-particle-1
         right: 0%
         bottom: 10%
         +mobile
@@ -273,6 +273,33 @@ $how-image-top-position: 90px
     #team
       position: relative
       background-color: $white
+      .particles, .coins
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        pointer-events: none
+      .particle, .coin
+        position: absolute
+      #team-particle-4
+        left: 50%
+        top: 20%
+      #team-particle-3
+        left: 40%
+        top: 80%
+      #team-coin-4
+        left: 60%
+        top: 10%
+      #team-coin-3
+        left: 30%
+        top: 70%
+      #team-coin-2
+        left: 0%
+        bottom: 0%
+      #team-coin-1
+        right: 0%
+        top: 90%
       #team-title
         +text-gradient(left, $secondary-color, $primary-color)
         display: inline-block
@@ -281,6 +308,7 @@ $how-image-top-position: 90px
         display: flex
         flex-wrap: wrap
         justify-content: space-around
+        position: relative
         .member
           flex: 0 0 25%
           +mobile
@@ -288,7 +316,6 @@ $how-image-top-position: 90px
     #contact
       background-image: linear-gradient(to right,$secondary-color, $orange)
       color: $white
-      position: relative
       .melt
         height: 575px
         background-image: url('assets/images/bg-melt.png')
