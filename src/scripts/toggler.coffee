@@ -23,3 +23,5 @@ document.addEventListener 'DOMContentLoaded', ->
   issue5 = document.querySelector('#issue-5 .split')
   p.addToggler issue5, 'ease-in', 0.1, true # for reverse, (remove classname)
   p.addToggler issue5, 'ease-out', 0.9, true
+
+  p.addToggler document.getElementById('how-image'), 'play', 0.3, true

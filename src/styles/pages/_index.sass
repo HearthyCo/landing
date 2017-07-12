@@ -126,7 +126,6 @@ $how-image-top-position: 90px
       #issues
         height: 100%
         position: relative
-        transition: opacity 1s ease-in-out
       .issue
         display: flex
         height: 110vh
@@ -150,6 +149,16 @@ $how-image-top-position: 90px
           &.ease-out
             .item.right
               opacity: 0
+            #animation-1
+              animation-name: playFirstAnimation
+            #animation-2
+              animation-name: playSecondAnimation
+            #animation-3
+              animation-name: playThirdAnimation
+            #animation-4
+              animation-name: playFourthAnimation
+            #animation-5
+              animation-name: playFifthAnimation
       .item.right
         position: fixed
         top: 0
@@ -159,7 +168,7 @@ $how-image-top-position: 90px
         display: flex
         justify-content: center
         flex-flow: column
-        transition: all 0.5s ease-in-out
+        transition: all 0.2s ease-in-out
         opacity: 0
         +tablet
           left: auto
@@ -173,7 +182,7 @@ $how-image-top-position: 90px
         height: 650px
         animation-duration: 2s
         animation-timing-function: steps(31)
-        animation-fill-mode: both
+        animation-fill-mode: forwards
         +mobile
           display: none
       #animation-1
@@ -224,9 +233,21 @@ $how-image-top-position: 90px
         padding: 20px 0
         margin-top: 0
       #how-image
-        top: - $how-image-top-position
+        top: 0
         margin-left: - $how-image-top-position / 2
         position: absolute
+        height: 348px
+        width: 413px
+        background-image: url('/assets/images/how-animation.png')
+        animation-duration: 2s
+        animation-timing-function: steps(32)
+        animation-iteration-count: infinite
+        opacity: 0
+        transition: all 0.5s ease-in-out
+        &.play
+          top: - $how-image-top-position
+          animation-name: playHowAnimation
+          opacity: 1
         +tablet
           width: 250px
           top: - $how-image-top-position / 2
@@ -336,3 +357,8 @@ $how-image-top-position: 90px
   100%
     background-position: -17701px center
 
+@keyframes playHowAnimation
+  0%
+    background-position: left center
+  100%
+    background-position: -13216px center
