@@ -123,6 +123,8 @@ $how-image-top-position: 90px
     #explanation
       min-height: 100vh
       background-color: $white
+      +mobile
+        padding: 0px 0 40px
       #issues
         height: 100%
         position: relative
@@ -132,6 +134,9 @@ $how-image-top-position: 90px
         align-items: center
         +mobile
           height: auto
+        .text
+          +tablet
+            padding-left: 20px
         .split
           &.ease-in
             .item.right
@@ -168,53 +173,44 @@ $how-image-top-position: 90px
         display: flex
         justify-content: center
         flex-flow: column
+        align-items: center
         transition: all 0.2s ease-in-out
         opacity: 0
-        +tablet
-          left: auto
-          width: 45%
+        pointer-events: none
         +mobile
           position: inherit
       .animation
         overflow: hidden
         background-repeat: no-repeat
         background-position: left center
-        height: 650px
+        height: $mobile-height
         animation-duration: 2s
         animation-timing-function: steps(31)
         animation-fill-mode: forwards
+        +tablet
+          transform: scale(0.65)
         +mobile
           display: none
       #animation-1
         background-image: url('/assets/images/animations/animation-1.png')
         width: 592px
-        +tablet
-          +bg-image(contain,'/assets/images/animations/illustration-1.png')
-          animation: none
+
       #animation-2
         background-image: url('/assets/images/animations/animation-2.png')
         width: 591px
-        +tablet
-          +bg-image(contain,'/assets/images/animations/illustration-2.png')
-          animation: none
+
       #animation-3
         background-image: url('/assets/images/animations/animation-3.png')
         width: 549px
-        +tablet
-          +bg-image(contain,'/assets/images/animations/illustration-3.png')
-          animation: none
+
       #animation-4
         background-image: url('/assets/images/animations/animation-4.png')
         width: 388px
-        +tablet
-          +bg-image(contain,'/assets/images/animations/illustration-4.png')
-          animation: none
+
       #animation-5
         background-image: url('/assets/images/animations/animation-5.png')
         width: 571px
-        +tablet
-          +bg-image(contain,'/assets/images/animations/illustration-5.png')
-          animation: none
+
       #explanation-title
         display: inline-block
         .line
@@ -249,14 +245,16 @@ $how-image-top-position: 90px
           animation-name: playHowAnimation
           opacity: 1
         +tablet
-          width: 250px
-          top: - $how-image-top-position / 2
-          margin-left: 0
+          transform: scale(0.7)
+          &.play
+            top: - $how-image-top-position * 1.25
         +mobile
           display: none
       #how-title
         text-align: center
         margin: 100px 0
+        +tablet
+          margin: 120px 0 60px
         +mobile
           margin: 20px 0
         span
@@ -280,6 +278,8 @@ $how-image-top-position: 90px
         right: 0
         left: 0
         pointer-events: none
+        +mobile
+          display: none
       .particle, .coin
         position: absolute
       #team-particle-4
@@ -296,14 +296,20 @@ $how-image-top-position: 90px
         top: 70%
       #team-coin-2
         left: 0%
-        bottom: 0%
+        bottom: 30%
+        +tablet
+          display: none
       #team-coin-1
         right: 0%
-        top: 90%
+        bottom: 10%
+        +tablet
+          display: none
       #team-title
         +text-gradient(left, $secondary-color, $primary-color)
         display: inline-block
         margin: 80px 0
+        +mobile
+          margin: 40px 0
       .team-wrapper
         display: flex
         flex-wrap: wrap
@@ -320,6 +326,9 @@ $how-image-top-position: 90px
         height: 575px
         background-image: url('assets/images/bg-melt.png')
         margin-top: -1px
+        +tablet
+          height: 250px
+          background-size: contain
         +mobile
           height: 100px
           background-size: contain
@@ -331,10 +340,12 @@ $how-image-top-position: 90px
         +tablet
           padding: 0px 0 100px
         +mobile
-          padding: 50px 0
+          padding: 30px 0 40px
       .logo
         text-align: center
         margin: 50px 0
+        +mobile
+          margin: 20px 0
       .contact-links
         text-align: center
         a
@@ -343,8 +354,14 @@ $how-image-top-position: 90px
           padding: 30px 20px
           +mobile
             width: 100%
+            padding: 15px 5px
+          img
+            +mobile
+              +size(65px)
           .text
             margin-top: 10px
+            +mobile
+              margin-top: 5px
 
 @keyframes layers-appear
   from

@@ -20,6 +20,7 @@
   .talk a
     display: inline-block
     text-align: center
+    vertical-align: middle
     +desktop
       min-width: 70px
     +mobile
@@ -28,22 +29,25 @@
       font-size: $font-size-s
       font-weight: bold
       +color-hover($base-font-color)
-      margin-top: 3px
-      +mobile
-        display: none
-    .icon
+      display: none
+      +desktop
+        display: block
+    .link
       +bg-color-hover(tint($cyan, 30%))
       border-radius: 100%
       margin: auto
       +size(43px)
       background-repeat: no-repeat
       background-position: center
+      +tablet
+        margin: auto 5px
       +mobile
         +size(30px)
+        background-size: 65%
+        margin: 3px
       &.slack
         background-image: url('/assets/images/header-slack.png')
       &.reddit
         background-image: url('/assets/images/header-reddit.png')
       &.bitcoin
         background-image: url('/assets/images/header-bitcoin.png')
-
