@@ -78,6 +78,8 @@ $how-image-top-position: 90px
         #intro-layers
           display: block
           height: 100%
+          +tablet
+            transform: scale(1)
           .layer
             position: absolute
             right: 0
@@ -85,11 +87,9 @@ $how-image-top-position: 90px
               margin: 0 0 auto auto
               display: block
               +tablet
-                margin-top: 10%
+                margin-top: 20%
             +mobile
               display: none
-            +tablet
-              +size(70%)
           #layer-1
             animation: layers-appear 0.5s ease-in-out both
             animation-delay: 1.6s
@@ -354,14 +354,11 @@ $how-image-top-position: 90px
           padding: 30px 20px
           +mobile
             width: 100%
-            padding: 15px 5px
-          img
+            padding: 5px
+          .icon
+            font-size: $font-size-xxxl * 2
             +mobile
-              +size(65px)
-          .text
-            margin-top: 10px
-            +mobile
-              margin-top: 5px
+              font-size: $font-size-xxxl
 
 @keyframes layers-appear
   from

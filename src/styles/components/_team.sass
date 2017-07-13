@@ -8,6 +8,8 @@
     background-size: cover
     border-radius: 100%
     margin: auto
+    position: relative
+    display: inline-block
     +tablet
       +size(200px)
     +mobile
@@ -19,3 +21,14 @@
     +text-gradient(left, $secondary-color, $primary-color)
   .position
     font-weight: bold
+  .icon
+    border-radius: 100%
+    +color-hover($gray)
+    position: absolute
+    bottom: 0
+    right: -15px
+    font-size: $font-size-xxxl
+    margin: 0
+    +mobile
+      font-size: $font-size-xxl
+
