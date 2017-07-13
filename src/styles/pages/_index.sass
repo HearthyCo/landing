@@ -213,6 +213,8 @@ $how-image-top-position: 90px
 
       #explanation-title
         display: inline-block
+        +tablet
+          padding-left: 20px
         .line
           +text-gradient(left, $secondary-color, $primary-color)
     #how
@@ -356,7 +358,6 @@ $how-image-top-position: 90px
           display: inline-block
           padding: 30px 5px
           +mobile
-            width: 100%
             padding: 5px
           .icon
             font-size: $font-size-xxxl * 2.5
@@ -369,8 +370,6 @@ $how-image-top-position: 90px
               +text-gradient(left, $yellow, $orange)
           .text
             color: $white
-
-
 
 @keyframes layers-appear
   from
