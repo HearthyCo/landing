@@ -4,36 +4,44 @@ mixin team()
       {
         name: "Javier Blanco",
         imageName: "javi",
-        position: "CEO"
+        position: "CEO",
+        linkedin: "https://es.linkedin.com/in/javierblancothomas"
       },{
         name: "David Conde Sayans",
         imageName: "david",
-        position: "CCO"
+        position: "CCO",
+        linkedin: "https://es.linkedin.com/in/davidcondesayans"
       },{
         name: "Juan Sebastián Valencia",
         imageName: "juan",
-        position: "CMIO"
+        position: "CMIO",
+        linkedin: "https://es.linkedin.com/in/juansebastianvalencia"
       },{
         name: "Diana D. Reinoso",
         imageName: "diana",
-        position: "Lead designer"
+        position: "Lead designer",
+        linkedin: "https://es.linkedin.com/in/dianadreinoso"
       },{
         name: "Anxo Soto",
         imageName: "anxo",
-        position: "TBD"
+        position: "TBD",
+        linkedin: "https://es.linkedin.com/in/anxosoto"
       },{
         name: "Álex B. Ferrín",
         imageName: "alex",
-        position: "Developer"
+        position: "Developer",
+        linkedin: "https://es.linkedin.com/in/alejandrobernardezferrin"
       },{
         name: "César Caride",
         imageName: "cesar",
-        position: "Developer"
+        position: "Developer",
+        linkedin: "https://es.linkedin.com/in/cesarcaride"
       }
     ];
   mixin member-card(member)
     .member
-      .member-image(style='background-image: url("/assets/images/team/' + member.imageName + '.jpg")')
+      a(href=member.linkedin, target='_blank', style='background-image: url("/assets/images/team/' + member.imageName + '.jpg")').member-image
+        .icon.icon-linkedin
       .name=member.name
       .position=member.position
   for member in team

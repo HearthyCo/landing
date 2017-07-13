@@ -278,8 +278,12 @@ $how-image-top-position: 90px
         right: 0
         left: 0
         pointer-events: none
+        opacity: 0.85
         +mobile
           display: none
+          opacity: 1
+        +wide
+          opacity: 1
       .particle, .coin
         position: absolute
       #team-particle-4
@@ -350,15 +354,23 @@ $how-image-top-position: 90px
         text-align: center
         a
           display: inline-block
-          color: $white
-          padding: 30px 20px
+          padding: 30px 5px
           +mobile
             width: 100%
             padding: 5px
           .icon
-            font-size: $font-size-xxxl * 2
+            font-size: $font-size-xxxl * 2.5
+            +text-gradient(left, $white, $white)
+            +tablet
+              font-size: $font-size-xxxl * 2
             +mobile
-              font-size: $font-size-xxxl
+              font-size: $font-size-xxxl * 1.25
+            +event
+              +text-gradient(left, $yellow, $orange)
+          .text
+            color: $white
+
+
 
 @keyframes layers-appear
   from
