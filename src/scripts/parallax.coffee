@@ -51,7 +51,6 @@ document.addEventListener 'DOMContentLoaded', ->
       suffix: '%,0)'
       units: '%'
 
-
   # Team section
 
   p.addProportional document.getElementById('team-particle-3'),
