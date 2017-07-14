@@ -183,6 +183,13 @@ html(lang="es")
         #economy-animation
           .bg-economy
           .container
+            #coin-animation
+              picture#economy-coin
+                source(srcset='/assets/images/hearthy-coin.webp', type='image/webp')
+                img(src='/assets/images/hearthy-coin.png', alt='coin shadow')
+              picture#economy-coin-shadow
+                source(srcset='/assets/images/hearthy-shadow.webp', type='image/webp')
+                img(src='/assets/images/hearthy-shadow.png', alt='coin shadow')
       section#team
         .particles
           picture#team-particle-4.particle
