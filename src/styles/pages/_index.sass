@@ -109,15 +109,31 @@ $how-image-top-position: 90px
         display: flex
         justify-content: space-between
         align-items: center
+        position: relative
+        .featured
+          position: absolute
+          top: 5px
+          right: 60%
+          text-align: center
+          left: 15px
+          font-size: $font-size-s
+          +mobile
+            top: -20px
+            color: $white
+            font-weight: bold
         +mobile
           height: $nav-height-mobile
       .logo
         flex: 1 1 auto
         height: 41px
+        flex: 0 0 50%
         +mobile
-          height: 30px
+          height: 20px
       #health20
         +bg-image(contain, '/assets/images/featured/health20.png')
+        height: 35px
+        +mobile
+          height: 20px
       #launchpad
         +bg-image(contain, '/assets/images/featured/launchpad.png')
     #explanation
