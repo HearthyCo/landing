@@ -130,7 +130,7 @@ $how-image-top-position: 90px
         position: relative
       .issue
         display: flex
-        height: 110vh
+        height: 100vh
         align-items: center
         +mobile
           height: auto
@@ -138,6 +138,9 @@ $how-image-top-position: 90px
           +tablet
             padding-left: 20px
         .split
+          position: relative
+          .item.left
+            z-index: 1
           &.ease-in
             .item.right
               opacity: 1
@@ -178,7 +181,10 @@ $how-image-top-position: 90px
         opacity: 0
         pointer-events: none
         +mobile
-          position: inherit
+          position: absolute
+          opacity: 1
+          left: 0
+          z-index: 0
       .animation
         overflow: hidden
         background-repeat: no-repeat
@@ -190,27 +196,34 @@ $how-image-top-position: 90px
         +tablet
           transform: scale(0.65)
         +mobile
-          display: none
+          height: 100%
+          width: 100%
+          opacity: 0.1
       #animation-1
         background-image: url('/assets/images/animations/animation-1.png')
         width: 592px
-
+        +mobile
+          +bg-image(contain, '/assets/images/animations/illustration-1.png')
       #animation-2
         background-image: url('/assets/images/animations/animation-2.png')
         width: 591px
-
+        +mobile
+          +bg-image(contain, '/assets/images/animations/illustration-2.png')
       #animation-3
         background-image: url('/assets/images/animations/animation-3.png')
         width: 549px
-
+        +mobile
+          +bg-image(contain, '/assets/images/animations/illustration-3.png')
       #animation-4
         background-image: url('/assets/images/animations/animation-4.png')
         width: 388px
-
+        +mobile
+          +bg-image(contain, '/assets/images/animations/illustration-4.png')
       #animation-5
         background-image: url('/assets/images/animations/animation-5.png')
         width: 571px
-
+        +mobile
+          +bg-image(contain, '/assets/images/animations/illustration-5.png')
       #explanation-title
         display: inline-block
         +tablet
@@ -221,7 +234,7 @@ $how-image-top-position: 90px
       background-image: linear-gradient(to right,$primary-color, $secondary-color)
       color: $white
       margin-top: $how-image-top-position
-      padding: (2 * $how-image-top-position) 0
+      padding: (2 * $how-image-top-position) 0 $how-image-top-position
       position: relative
       z-index: 1
       +tablet
@@ -251,10 +264,10 @@ $how-image-top-position: 90px
           &.play
             top: - $how-image-top-position * 1.5
         +mobile
-          display: none
+          +bg-image(contain, '/assets/images/animations/illustration-how.png')
       #how-title
         text-align: center
-        margin: 80px 0 50px
+        margin: 60px 0
         +tablet
           margin: 100px 0 40px
         +mobile
@@ -345,7 +358,7 @@ $how-image-top-position: 90px
         display: inline-block
         margin: 80px 0
         +mobile
-          margin: 40px 0
+          margin: 40px 0 20px
       .team-wrapper
         display: flex
         flex-wrap: wrap
@@ -354,7 +367,7 @@ $how-image-top-position: 90px
         .member
           flex: 0 0 25%
           +mobile
-            flex: 0 0 100%
+            flex: 0 0 50%
     #contact
       background-image: linear-gradient(to right,$secondary-color, $orange)
       color: $white
