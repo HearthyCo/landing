@@ -270,6 +270,36 @@ $how-image-top-position: 90px
         padding: 0 40px
         +mobile
           padding: 0
+    #economy
+      padding: 30px 0
+      #economy-title
+        +text-gradient(left, $secondary-color, $primary-color)
+        display: inline-block
+        padding-left: 20px
+        +mobile
+          padding: 0
+          text-align: center
+      .item
+        padding: 0 20px
+        +mobile
+          padding: 0px
+      #economy-animation
+        position: relative
+        height: 440px
+        background-image: linear-gradient(to right,$orange, $secondary-color)
+        +mobile
+          height: 175px
+        .bg-economy
+          background-image: url('/assets/images/bg-economy.png')
+          background-position: center
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          +mobile
+            background-repeat: no-repeat
+            background-size: cover
     #team
       position: relative
       background-color: $white
