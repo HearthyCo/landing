@@ -1,0 +1,32 @@
+worker_processes 1;
+error_log stderr;
+pid nginx.pid;
+daemon off;
+
+events {
+  worker_connections 768;
+}
+
+http {
+  types_hash_max_size 2048;
+  include mime.types;
+  server {
+    listen {{ $.PORT }};
+    server_name  _;
+    root /app/dist/www;
+
+    location / {
+      try_files $uri $uri/ /index.html;
+    }
+
+    location ~ \.(html|htm|pdf)$ {
+      add_header Cache-Control "max-age=60, public";
+    }
+
+    location ~ \.(css|js|jpg|png|gif|webp|svg|woff|ttf|eot|ico)$ {
+      add_header Cache-Control "max-age=31536000, public";
+    }
+
+
+  }
+}
