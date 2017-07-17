@@ -278,16 +278,13 @@ $featured-height: 1.5 * $nav-height
     #how
       background-image: linear-gradient(to right,$primary-color, $secondary-color)
       color: $white
-      margin-top: $how-image-top-position
       padding: (2 * $how-image-top-position) 0 $how-image-top-position
       position: relative
       z-index: 1
       +tablet
-        margin-top: $how-image-top-position / 2
         padding: $how-image-top-position 0
       +mobile
         padding: 20px 0
-        margin-top: 0
       #how-image
         top: 0
         margin-left: - $how-image-top-position / 2
@@ -330,6 +327,9 @@ $featured-height: 1.5 * $nav-height
           padding: 0
     #economy
       padding: 30px 0
+      margin-top: -130px
+      +mobile
+        margin-top: 0
       #economy-title
         +text-gradient(left, $secondary-color, $primary-color)
         display: inline-block
@@ -351,7 +351,7 @@ $featured-height: 1.5 * $nav-height
           background-image: image-url('bg-economy.png')
           background-position: center
           position: absolute
-          top: 0
+          top: -1px
           left: 0
           right: 0
           bottom: 0

@@ -105,3 +105,11 @@ document.addEventListener 'DOMContentLoaded', ->
       units: '%'
       ref: document.getElementById('economy-animation')
 
+
+  if  window.innerWidth > 567
+    p.addProportional document.getElementById('how'),
+      0, 100, 'transform', 0, -85,
+        prefix: 'translate3d(0,'
+        suffix: '%,0)'
+        units: '%'
+        ref: document.getElementById('how')
