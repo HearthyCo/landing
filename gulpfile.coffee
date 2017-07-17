@@ -40,6 +40,7 @@ gulp.task 'compass', ->
   .pipe compass
     css: 'dist/www'
     sass: 'src/styles'
+    relative: false
     sourcemap: true
   .on 'error', (err) ->
     console.log err

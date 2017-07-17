@@ -5,7 +5,7 @@ require 'sass-css-importer'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "/"
+css_dir = "dist/www"
 sass_dir = "src/styles"
 images_dir = "assets/images"
 fonts_dir = "assets/fonts"
