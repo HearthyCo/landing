@@ -1,4 +1,5 @@
 $how-image-top-position: 90px
+$featured-height: 1.5 * $nav-height
 
 #index
   #content-page
@@ -9,14 +10,15 @@ $how-image-top-position: 90px
       align-items: center
       overflow: hidden
       color: $white
-      min-height: $mobile-height - $nav-height-mobile
+      min-height: $mobile-height - $nav-height
       max-height: $desktop-width - $nav-height
-      height: calc(100vh - 2 * (#{$nav-height}))
+      height: calc(100vh - (2.5 * #{$nav-height}))
       position: relative
       z-index: 1
       +mobile
         max-height: $desktop-width - $nav-height-mobile
-        height: calc(100vh - 2 * (#{$nav-height-mobile}))
+        min-height: $mobile-height - (3.5 * $nav-height-mobile)
+        height: calc(100vh - (4 * #{$nav-height-mobile}))
       .bg-particles
         position: absolute
         top: 0
@@ -102,41 +104,60 @@ $how-image-top-position: 90px
     #featured
       position: relative
       z-index: 1
-      background-color: $white
+      background-color: $yellow
+      background-image: linear-gradient(to right, $yellow 50%, $white 51%, $white)
+      height: $featured-height
+      +mobile
+        height: $nav-height-mobile * 3
       .container
-        height: $nav-height
-        background-color: $white
         display: flex
-        justify-content: space-between
         align-items: center
         position: relative
-        .featured
-          position: absolute
-          top: 5px
-          right: 60%
-          text-align: center
-          left: 15px
-          font-size: $font-size-s
+        height: 100%
+        padding: 0
+        background-color: $white
+        +mobile
+          flex-direction: column
+        & > div
+          vertical-align: middle
+          position: relative
+          height: 100%
+          &:after
+            content: ''
+            position: absolute
           +mobile
-            top: -20px
-            color: $white
-            font-weight: bold
-            text-align: left
-        +mobile
-          height: $nav-height-mobile
-      .logo
-        flex: 1 1 auto
-        height: 41px
-        flex: 0 0 50%
-        +mobile
-          height: 30px
+            width: 100%
+            height: $nav-height-mobile
+            &:after
+              display: none
+        .featured
+          flex: 1 1 20%
+          color: $white
+          font-weight: bold
+          background-color: $yellow
+          line-height: $featured-height
+          padding-left: 10px
+          +mobile
+            line-height: $nav-height-mobile
+            text-align: center
+            padding-left: 0px
+        .logo
+          flex: 1 1 40%
       #health20
         +bg-image(contain, 'featured/health20.png')
-        height: 35px
+        background-size: 45%
         +mobile
-          height: 30px
+          background-size: 130px
+        &:after
+          +triangle(right, $featured-height, tint($light-gray, 75%))
       #launchpad
         +bg-image(contain, 'featured/launchpad.png')
+        background-size: 45%
+        background-color: tint($light-gray, 75%)
+        +mobile
+          background-size: 130px
+        &:after
+          +triangle(right, $featured-height, $yellow)
     #explanation
       min-height: 100vh
       background-color: $white
@@ -147,7 +168,7 @@ $how-image-top-position: 90px
         position: relative
       .issue
         display: flex
-        height: 100vh
+        padding: 1% 0
         align-items: center
         +mobile
           height: auto
@@ -205,6 +226,7 @@ $how-image-top-position: 90px
         // justify-content: center
         // flex-flow: column
         // align-items: center
+
         transition: all 0.2s ease-in-out
         opacity: 0
         pointer-events: none

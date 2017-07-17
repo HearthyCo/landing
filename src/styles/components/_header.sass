@@ -14,38 +14,36 @@
     align-items: center
     justify-content: space-between
   .logo
+    img
+      vertical-align: middle
     +mobile
-      max-width: 150px
-      padding-top: 5px
+      max-width: 140px
   .talk a
     display: inline-block
     text-align: center
     vertical-align: middle
     +desktop
-      min-width: 70px
+      min-width: 60px
     +mobile
       margin: 0
     .text
-      font-size: $font-size-s
-      font-weight: bold
+      font-size: $font-size-xs
       +color-hover($base-font-color)
       display: none
       +desktop
         display: block
+        margin-top: -3px
     .icon
       background-color: tint($cyan, 30%)
       border-radius: 100%
       margin: auto
       +event
         background-color: $cyan
-      +size(43px)
-      font-size: $font-size-xxxl
-      line-height: $font-size-xxxl
       color: $white
       +tablet
         margin: auto 5px
-      +mobile
-        +size(32px)
-        font-size: $font-size-xxl
-        line-height: $font-size-xxl
-        margin: 3px
+
+      +size(32px)
+      font-size: $font-size-xxl
+      line-height: $font-size-xxl
+      margin: 3px
