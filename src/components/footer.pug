@@ -2,8 +2,8 @@ mixin footer()
   footer#footer
     .container
       picture.logo
-        source(srcset='/assets/images/logo.svg', type='image/svg+xml')
-        img(src='/assets/images/logo.png', alt='logo')
+        source(srcset='/assets/images/logo.svg' + tag, type='image/svg+xml')
+        img(src='/assets/images/logo.png' + tag, alt='logo')
       .whitepaper
         h2 Interested in our future crowdsale?
         form

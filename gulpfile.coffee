@@ -98,7 +98,8 @@ gulp.task 'coffee', ['lint', 'browserify']
 # Pug (ie: Jade)
 gulp.task 'pug', ->
   gulp.src 'src/pages/**/*.pug'
-  .pipe pug()
+  .pipe pug
+    locals: tag: '?' + Math.round(Date.now() / 1000)
   .on 'error', (err) ->
     console.log err.message
     @emit 'end'

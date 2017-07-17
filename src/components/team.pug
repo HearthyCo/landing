@@ -40,7 +40,7 @@ mixin team()
     ];
   mixin member-card(member)
     .member
-      a(href=member.linkedin, target='_blank', style='background-image: url("/assets/images/team/' + member.imageName + '.jpg")').member-image
+      a(href=member.linkedin, target='_blank', style='background-image: url("/assets/images/team/' + member.imageName + '.jpg")' + tag).member-image
         .icon.icon-linkedin
       .name=member.name
       .position=member.position

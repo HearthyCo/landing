@@ -12,9 +12,9 @@ html(lang="es")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(description='')
 
-    link(rel="shortcut icon", href="/assets/favicon.ico", type="image/x-icon")
-    link(href='style.css', rel='stylesheet')
-    script(src='main.js')
+    link(rel="shortcut icon", href="/assets/favicon.ico" + tag, type="image/x-icon")
+    link(href='style.css' + tag, rel='stylesheet')
+    script(src='main.js' + tag)
     +analytics()
   body#index.page
     +header()
@@ -24,14 +24,14 @@ html(lang="es")
         #bg-intro-particles2.bg-particles
         .particles
           picture#intro-particle-4.particle
-            source(srcset='/assets/images/particles/particle-4.webp', type='image/webp')
-            img(src='/assets/images/particles/particle-4.png', alt='partilcle')
+            source(srcset='/assets/images/particles/particle-4.webp' + tag, type='image/webp')
+            img(src='/assets/images/particles/particle-4.png' + tag, alt='partilcle')
           picture#intro-particle-3.particle
-            source(srcset='/assets/images/particles/particle-3.webp', type='image/webp')
-            img(src='/assets/images/particles/particle-3.png', alt='partilcle')
+            source(srcset='/assets/images/particles/particle-3.webp' + tag, type='image/webp')
+            img(src='/assets/images/particles/particle-3.png' + tag, alt='partilcle')
           picture#intro-particle-2.particle
-            source(srcset='/assets/images/particles/particle-2.webp', type='image/webp')
-            img(src='/assets/images/particles/particle-2.png', alt='partilcle')
+            source(srcset='/assets/images/particles/particle-2.webp' + tag, type='image/webp')
+            img(src='/assets/images/particles/particle-2.png' + tag, alt='partilcle')
         .container.split
           .item.left
             .item-content
@@ -46,18 +46,18 @@ html(lang="es")
           .item.right
             #intro-layers
               picture#layer-3.layer
-                source(srcset='/assets/images/intro-layers/layer-3.webp', type='image/webp')
-                img(src='/assets/images/intro-layers/layer-3.png', alt='intro image layer 3')
+                source(srcset='/assets/images/intro-layers/layer-3.webp' + tag, type='image/webp')
+                img(src='/assets/images/intro-layers/layer-3.png' + tag, alt='intro image layer 3')
               picture#layer-2.layer
-                source(srcset='/assets/images/intro-layers/layer-2.webp', type='image/webp')
-                img(src='/assets/images/intro-layers/layer-2.png', alt='intro image layer 2')
+                source(srcset='/assets/images/intro-layers/layer-2.webp' + tag, type='image/webp')
+                img(src='/assets/images/intro-layers/layer-2.png' + tag, alt='intro image layer 2')
               picture#layer-1.layer
-                source(srcset='/assets/images/intro-layers/layer-1.webp', type='image/webp')
-                img(src='/assets/images/intro-layers/layer-1.png', alt='intro image layer 1')
+                source(srcset='/assets/images/intro-layers/layer-1.webp' + tag, type='image/webp')
+                img(src='/assets/images/intro-layers/layer-1.png' + tag, alt='intro image layer 1')
         .particles
           picture#intro-particle-1.particle
-            source(srcset='/assets/images/particles/particle-1.webp', type='image/webp')
-            img(src='/assets/images/particles/particle-1.png', alt='partilcle')
+            source(srcset='/assets/images/particles/particle-1.webp' + tag, type='image/webp')
+            img(src='/assets/images/particles/particle-1.png' + tag, alt='partilcle')
       section#featured
         .container
           span.featured Featured on:
@@ -186,26 +186,26 @@ html(lang="es")
           .container
             #coin-animation
               picture#economy-coin
-                source(srcset='/assets/images/hearthy-coin.webp', type='image/webp')
-                img(src='/assets/images/hearthy-coin.png', alt='coin shadow')
+                source(srcset='/assets/images/hearthy-coin.webp' + tag, type='image/webp')
+                img(src='/assets/images/hearthy-coin.png' + tag, alt='coin shadow')
               picture#economy-coin-shadow
-                source(srcset='/assets/images/hearthy-shadow.webp', type='image/webp')
-                img(src='/assets/images/hearthy-shadow.png', alt='coin shadow')
+                source(srcset='/assets/images/hearthy-shadow.webp' + tag, type='image/webp')
+                img(src='/assets/images/hearthy-shadow.png' + tag, alt='coin shadow')
       section#team
         .particles
           picture#team-particle-4.particle
-            source(srcset='/assets/images/particles/particle-4.webp', type='image/webp')
-            img(src='/assets/images/particles/particle-4.png', alt='partilcle')
+            source(srcset='/assets/images/particles/particle-4.webp' + tag, type='image/webp')
+            img(src='/assets/images/particles/particle-4.png' + tag, alt='partilcle')
           picture#team-particle-3.particle
-            source(srcset='/assets/images/particles/particle-3.webp', type='image/webp')
-            img(src='/assets/images/particles/particle-3.png', alt='partilcle')
+            source(srcset='/assets/images/particles/particle-3.webp' + tag, type='image/webp')
+            img(src='/assets/images/particles/particle-3.png' + tag, alt='partilcle')
         .coins
           picture#team-coin-4.coin
-            source(srcset='/assets/images/particles/coin-4.webp', type='image/webp')
-            img(src='/assets/images/particles/coin-4.png', alt='coin')
+            source(srcset='/assets/images/particles/coin-4.webp' + tag, type='image/webp')
+            img(src='/assets/images/particles/coin-4.png' + tag, alt='coin')
           picture#team-coin-3.coin
-            source(srcset='/assets/images/particles/coin-3.webp', type='image/webp')
-            img(src='/assets/images/particles/coin-3.png', alt='coin')
+            source(srcset='/assets/images/particles/coin-3.webp' + tag, type='image/webp')
+            img(src='/assets/images/particles/coin-3.png' + tag, alt='coin')
         .container
           h1#team-title
             span The 
@@ -214,19 +214,19 @@ html(lang="es")
             +team()
         .coins
           picture#team-coin-2.coin
-            source(srcset='/assets/images/particles/coin-2.webp', type='image/webp')
-            img(src='/assets/images/particles/coin-2.png', alt='coin')
+            source(srcset='/assets/images/particles/coin-2.webp' + tag, type='image/webp')
+            img(src='/assets/images/particles/coin-2.png' + tag, alt='coin')
           picture#team-coin-1.coin
-            source(srcset='/assets/images/particles/coin-1.webp', type='image/webp')
-            img(src='/assets/images/particles/coin-1.png', alt='coin')
+            source(srcset='/assets/images/particles/coin-1.webp' + tag, type='image/webp')
+            img(src='/assets/images/particles/coin-1.png' + tag, alt='coin')
       section#contact
         .melt
         .container
           .content
             .logo
               picture
-                source(srcset='/assets/images/logo2.svg', type='image/svg+xml')
-                img(src='/assets/images/logo2.png', alt='logo')
+                source(srcset='/assets/images/logo2.svg' + tag, type='image/svg+xml')
+                img(src='/assets/images/logo2.png' + tag, alt='logo')
               div 2017
             .contact-links
               a.link(href="https://slack-hearthy-.herokuapp.com/", target='_blank')
