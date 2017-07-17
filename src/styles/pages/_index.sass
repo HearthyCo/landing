@@ -24,9 +24,9 @@ $how-image-top-position: 90px
         right: 0
         left: 0
       #bg-intro-particles1
-        +bg-image(inherit, '/assets/images/particles/bg-particles1.png')
+        +bg-image(inherit, 'particles/bg-particles1.png')
       #bg-intro-particles2
-        +bg-image(cover, '/assets/images/particles/bg-particles2.png')
+        +bg-image(cover, 'particles/bg-particles2.png')
       .particle
         position: absolute
       #intro-particle-4
@@ -130,12 +130,12 @@ $how-image-top-position: 90px
         +mobile
           height: 20px
       #health20
-        +bg-image(contain, '/assets/images/featured/health20.png')
+        +bg-image(contain, 'featured/health20.png')
         height: 35px
         +mobile
           height: 20px
       #launchpad
-        +bg-image(contain, '/assets/images/featured/launchpad.png')
+        +bg-image(contain, 'featured/launchpad.png')
     #explanation
       min-height: 100vh
       background-color: $white
@@ -216,30 +216,30 @@ $how-image-top-position: 90px
           width: 100%
           opacity: 0.1
       #animation-1
-        background-image: url('/assets/images/animations/animation-1.png')
+        background-image: image-url('animations/animation-1.png')
         width: 592px
         +mobile
-          +bg-image(contain, '/assets/images/animations/illustration-1.png')
+          +bg-image(contain, 'animations/illustration-1.png')
       #animation-2
-        background-image: url('/assets/images/animations/animation-2.png')
+        background-image: image-url('animations/animation-2.png')
         width: 591px
         +mobile
-          +bg-image(contain, '/assets/images/animations/illustration-2.png')
+          +bg-image(contain, 'animations/illustration-2.png')
       #animation-3
-        background-image: url('/assets/images/animations/animation-3.png')
+        background-image: image-url('animations/animation-3.png')
         width: 549px
         +mobile
-          +bg-image(contain, '/assets/images/animations/illustration-3.png')
+          +bg-image(contain, 'animations/illustration-3.png')
       #animation-4
-        background-image: url('/assets/images/animations/animation-4.png')
+        background-image: image-url('animations/animation-4.png')
         width: 388px
         +mobile
-          +bg-image(contain, '/assets/images/animations/illustration-4.png')
+          +bg-image(contain, 'animations/illustration-4.png')
       #animation-5
-        background-image: url('/assets/images/animations/animation-5.png')
+        background-image: image-url('animations/animation-5.png')
         width: 571px
         +mobile
-          +bg-image(contain, '/assets/images/animations/illustration-5.png')
+          +bg-image(contain, 'animations/illustration-5.png')
       #explanation-title
         display: inline-block
         +tablet
@@ -265,7 +265,7 @@ $how-image-top-position: 90px
         position: absolute
         height: 348px
         width: 413px
-        background-image: url('/assets/images/how-animation.png')
+        background-image: image-url('how-animation.png')
         animation-duration: 2s
         animation-timing-function: steps(32)
         animation-iteration-count: infinite
@@ -280,7 +280,7 @@ $how-image-top-position: 90px
           &.play
             top: - $how-image-top-position * 1.5
         +mobile
-          +bg-image(contain, '/assets/images/animations/illustration-how.png')
+          +bg-image(contain, 'animations/illustration-how.png')
       #how-title
         text-align: center
         margin: 60px 0
@@ -319,7 +319,7 @@ $how-image-top-position: 90px
         +mobile
           height: 175px
         .bg-economy
-          background-image: url('/assets/images/bg-economy.png')
+          background-image: image-url('bg-economy.png')
           background-position: center
           position: absolute
           top: 0
@@ -389,7 +389,7 @@ $how-image-top-position: 90px
       color: $white
       .melt
         height: 560px
-        background-image: url('assets/images/bg-melt.png')
+        background-image: image-url('bg-melt.png')
         margin-top: -1px
         +tablet
           height: 250px

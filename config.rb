@@ -4,12 +4,12 @@ require 'sass-css-importer'
 # Require any additional compass plugins here.
 
 # Set this to the root of your project when deployed:
-http_path = "/dist/www"
-css_dir = "dist/www"
+http_path = "/"
+css_dir = "/"
 sass_dir = "src/styles"
 images_dir = "assets/images"
 fonts_dir = "assets/fonts"
-javascripts_dir = "dist"
+javascripts_dir = "/"
 
 # output_style = :expanded or :nested or :compact or :compressed
 output_style = :compact
