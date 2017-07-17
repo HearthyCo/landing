@@ -121,6 +121,7 @@ $how-image-top-position: 90px
             top: -20px
             color: $white
             font-weight: bold
+            text-align: left
         +mobile
           height: $nav-height-mobile
       .logo
@@ -128,12 +129,12 @@ $how-image-top-position: 90px
         height: 41px
         flex: 0 0 50%
         +mobile
-          height: 20px
+          height: 30px
       #health20
         +bg-image(contain, 'featured/health20.png')
         height: 35px
         +mobile
-          height: 20px
+          height: 30px
       #launchpad
         +bg-image(contain, 'featured/launchpad.png')
     #explanation
@@ -155,6 +156,9 @@ $how-image-top-position: 90px
             padding-left: 20px
         .split
           position: relative
+          align-items: center
+          +tablet
+            display: block
           .item.left
             z-index: 1
           &.ease-in
@@ -173,6 +177,8 @@ $how-image-top-position: 90px
           &.ease-out
             .item.right
               opacity: 0
+              +tablet
+                opacity: 1
             #animation-1
               animation-name: playFirstAnimation
             #animation-2
@@ -183,16 +189,22 @@ $how-image-top-position: 90px
               animation-name: playFourthAnimation
             #animation-5
               animation-name: playFifthAnimation
+      #explanation-title
+        display: inline-block
+        +tablet
+          padding-left: 20px
+        .line
+          +text-gradient(left, $secondary-color, $primary-color)
       .item.right
-        position: fixed
-        top: 0
-        right: 0
-        left: 55%
-        bottom: 0
-        display: flex
-        justify-content: center
-        flex-flow: column
-        align-items: center
+        // position: fixed
+        // top: 0
+        // right: 0
+        // left: 55%
+        // bottom: 0
+        // display: flex
+        // justify-content: center
+        // flex-flow: column
+        // align-items: center
         transition: all 0.2s ease-in-out
         opacity: 0
         pointer-events: none
@@ -209,8 +221,9 @@ $how-image-top-position: 90px
         animation-duration: 2s
         animation-timing-function: steps(31)
         animation-fill-mode: forwards
-        +tablet
-          transform: scale(0.65)
+        margin: auto
+        // +tablet
+        //   transform: scale(0.75)
         +mobile
           height: 100%
           width: 100%
@@ -240,12 +253,6 @@ $how-image-top-position: 90px
         width: 571px
         +mobile
           +bg-image(contain, 'animations/illustration-5.png')
-      #explanation-title
-        display: inline-block
-        +tablet
-          padding-left: 20px
-        .line
-          +text-gradient(left, $secondary-color, $primary-color)
     #how
       background-image: linear-gradient(to right,$primary-color, $secondary-color)
       color: $white
@@ -329,6 +336,22 @@ $how-image-top-position: 90px
           +mobile
             background-repeat: no-repeat
             background-size: cover
+        #coin-animation
+          position: absolute
+          bottom: 120px
+          display: none
+          +desktop
+            display: block
+        #economy-coin
+          position: relative
+          z-index: 1
+          display: block
+        #economy-coin-shadow
+          position: absolute
+          display: block
+          bottom: -28px
+          left: 50%
+          margin-left: -70px
     #team
       position: relative
       background-color: $white
