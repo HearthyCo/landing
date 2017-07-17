@@ -89,3 +89,19 @@ document.addEventListener 'DOMContentLoaded', ->
       suffix: '%,0)'
       units: '%'
       ref: document.getElementById('team')
+
+  # Economy section hearthy-coin animation
+
+  p.addProportional document.getElementById('coin-animation'),
+    50, 70, 'transform', 0, 400,
+      prefix: 'translate3d('
+      suffix: '%,0,0)'
+      units: '%'
+      ref: document.getElementById('economy-animation')
+  p.addProportional document.getElementById('economy-coin'),
+    50, 70, 'transform', 0, 720,
+      prefix: 'rotate('
+      suffix: 'deg)'
+      units: '%'
+      ref: document.getElementById('economy-animation')
+
