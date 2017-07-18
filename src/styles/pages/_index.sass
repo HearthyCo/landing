@@ -104,11 +104,11 @@ $featured-height: 1.5 * $nav-height
     #featured
       position: relative
       z-index: 1
-      background-color: $yellow
       background-image: linear-gradient(to right, $yellow 50%, $white 51%, $white)
       height: $featured-height
       +mobile
         height: $nav-height-mobile * 3
+        background: $white
       .container
         display: flex
         align-items: center
@@ -133,6 +133,7 @@ $featured-height: 1.5 * $nav-height
         .featured
           flex: 1 1 20%
           color: $white
+          @extend %font-size-l
           font-weight: bold
           background-color: $yellow
           line-height: $featured-height
@@ -159,10 +160,10 @@ $featured-height: 1.5 * $nav-height
         &:after
           +triangle(right, $featured-height, $yellow)
     #explanation
-      min-height: 100vh
+      padding: 70px 0 30px
       background-color: $white
       +mobile
-        padding: 0px 0 40px
+        padding: 20px 0 40px
       #issues
         height: 100%
         position: relative
