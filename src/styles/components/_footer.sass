@@ -10,18 +10,18 @@
     +mobile
       width: 60%
       margin: auto
-  .whitepaper
+  #whitepaper
     h2
       margin-right: 20px
       +text-gradient(left, $secondary-color, $primary-color)
       +mobile
         margin-right: 0
         font-size: $font-size-xl
-    form, h2, input, button
+    .newsletter, h2, input, button
       display: inline-block
       width: auto
       vertical-align: middle
-    form
+    .newsletter
       input
         border-top-right-radius: 0
         border-bottom-right-radius: 0
@@ -46,6 +46,13 @@
           min-width: 100px
           width: 260px
           max-width: 260px
+    .after-submit
+      display: none
+    &.submitted
+      .before-submit
+        display: none
+      .after-submit
+        display: block
   .links
     padding: 20px 0 0
     span

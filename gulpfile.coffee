@@ -99,7 +99,9 @@ gulp.task 'coffee', ['lint', 'browserify']
 gulp.task 'pug', ->
   gulp.src 'src/pages/**/*.pug'
   .pipe pug
-    locals: tag: '?' + Math.round(Date.now() / 1000)
+    locals:
+      tag: '?' + Math.round(Date.now() / 1000),
+      urlSubcribe: process.env.URL_MAILCHIMP_SUBCRIBE
   .on 'error', (err) ->
     console.log err.message
     @emit 'end'
