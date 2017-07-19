@@ -101,7 +101,7 @@ gulp.task 'pug', ->
   .pipe pug
     locals:
       tag: '?' + Math.round(Date.now() / 1000),
-      urlSubcribe: process.env.URL_MAILCHIMP_SUBCRIBE
+      urlSubcribe: process.env.URL_MAILCHIMP_SUBSCRIBE
   .on 'error', (err) ->
     console.log err.message
     @emit 'end'
