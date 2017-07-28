@@ -1,14 +1,19 @@
 {
-  "name": "easy-dev",
+  "name": "hearthyco-landing",
   "version": "0.1.0",
-  "description": "A simple scaffold to easily develop HTML+Coffeescript+SASS",
-  "repository": "https://gitlab.com/anxo/easy-dev.git",
+  "description": "The HearthyCo Landing page",
+  "repository": "",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "start": "gulp",
     "heroku-postbuild": "gulp build"
   },
-  "author": "Anxo Soto",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HearthyCo/landing"
+  },
+  "author": "Glue.gl",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.17.6",

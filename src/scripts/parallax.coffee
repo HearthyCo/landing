@@ -1,7 +1,7 @@
-parallastic = require './parallastic'
+parallastic = require 'parallastic'
 
 document.addEventListener 'DOMContentLoaded', ->
-  p = parallastic.parallastic(window)
+  p = parallastic(window)
 
   # Intro section
 

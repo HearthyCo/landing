@@ -1,8 +1,8 @@
-parallastic = require './parallastic'
+parallastic = require 'parallastic'
 
 document.addEventListener 'DOMContentLoaded', ->
   if  window.innerWidth > 567
-    p = parallastic.parallastic(window)
+    p = parallastic(window)
 
     issue1 = document.querySelector('#issue-1 .split')
     p.addToggler issue1, 'ease-in', 0.6, true # for reverse, (remove classname)
