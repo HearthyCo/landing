@@ -25,3 +25,8 @@ document.addEventListener 'DOMContentLoaded', ->
     p.addToggler issue5, 'ease-out', 1.1, true
 
     p.addToggler document.getElementById('how-image'), 'play', 0.25, true
+
+    p.addToggler document.getElementById('roadmap-1'), 'appear', 0.25, true
+    p.addToggler document.getElementById('roadmap-2'), 'appear', 0.35, true
+    p.addToggler document.getElementById('roadmap-3'), 'appear', 0.25, true
+    p.addToggler document.getElementById('roadmap-4'), 'appear', 0.35, true

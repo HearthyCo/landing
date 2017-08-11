@@ -2,6 +2,7 @@ include ../components/header
 include ../components/footer
 include ../components/analytics
 include ../components/team
+include ../components/contactSlack
 
 doctype html
 html(lang="es")
@@ -130,14 +131,22 @@ html(lang="es")
             span works?
           .split
             .item.left
-              p With Hearthy, we want to create a decentralized, open and sustainable ecosystem to improve health care access for everyone, regardless of income, making healthcare more efficient, and more user-centered.
-              p Our ecosystem will consist of:
-              p
-                strong A Coin: 
-                span The &#128154 (HTY) which will fuel the ecosystem.
+              p The Hearthy ecosystem consists of a protocol that supports a blockchain-based PHR, a value-sharing digital currency, and a suite of open-source applications that facilitate adoption and increase network effects.
+
+              p In our ecosystem patients, medical professionals, providers and EHR vendors communicate with each other, generate and transfer value and increase their efficiency, deploying a system that is more economical, efficient and user-centered.
+
+              p Hearthy is an open ecosystem, close to the real economy, and designed to give it an actual off-chain use, to its own currency.
+
+              p More info on how it works in our whitepaper.
+
             .item.right
 
+              p Our ecosystem will consist of:
               ul
+                li
+                  p
+                    strong A Coin: 
+                    span The &#128154 (HER) which will fuel the ecosystem.
                 li
                   p
                     strong A Protocol: 
@@ -154,10 +163,10 @@ html(lang="es")
             span economy
           .split
             .item.left
-              p One of the biggest problems in health care is related to the fact that economic success of organizations related to health care is not necessarily linked to their health outcomes. This happens routinely (eg. homeopathy) and creates huge distortions and inefficiencies in the market. A health-related token and a health- oriented economy must encourage users and organizations to achieve better health outcomes.
-              p Every organization working at the ecosystem will have a Health Score., based on its combined user health scorings, that can result in lower fees for the organizations demonstrating the best performance.
+              p One of the biggest problems in health care is related to the fact that economic success of organizations related to health care is not necessarily linked to their health outcomes. This happens routinely (eg. homeopathy) and creates huge distortions and inefficiencies in the market. A health-related token and a health-oriented economy must encourage users and organizations to achieve better health outcomes.
+              p Every organization working at the ecosystem will have a Health Score, based on its combined user health scorings, that can result in lower fees for the organizations demonstrating the best performance.
             .item.right
-              p Thi also help us to achieve another goal, to enhance the value of our coin - the token - to the maximum.
+              p Thi also help us to achieve another goal, to enhance the value of our coin -the token- to the maximum.
               p We believe digital currencies are in the verge of mass adoption, and we need our token to be linked to real, off-chain economy, so Hearthy tokens are designed to be used by patients to buy medical services, and by organizations to request information about users. Also tokens can be bought and stored in their wallets as a savings product, as our token tends to be deflationary tokens in the hands of patients can be used later, as medical costs raise due aging.
         #economy-animation
           .bg-economy
@@ -169,6 +178,65 @@ html(lang="es")
               picture#economy-coin-shadow
                 source(srcset='/assets/images/hearthy-shadow.webp' + tag, type='image/webp')
                 img(src='/assets/images/hearthy-shadow.png' + tag, alt='coin shadow')
+      section#apps
+        .apps-intro
+          .container
+            h1#apps-title
+              strong Demo
+              span Apps
+            p Hearthy is developing a series of demo apps to show the potential of the ecosystem, our two first apps are a chatbot to create medical apointments and the first development of Hearthy, our doctor-patient communication app.
+        #hearthy-bot.section
+          .container
+            .split
+              .item.left
+                picture
+                  source(srcset='/assets/images/hearthybot.webp' + tag, type='image/webp')
+                  img(src='/assets/images/hearthybot.png' + tag, alt='hearthybot')
+              .item.right
+                h2 Hearthybot
+                p Hearthybot is a tiny chatbot, its the most basic automated agent in our ecosystem and it just helps in creating a medical apointments. It's a very early release and its functions are still in development.
+                .soon Coming soon
+        #hearthy-app.section
+          .container
+            .split
+              .item.left
+                picture
+                  source(srcset='/assets/images/hearthyapp.webp' + tag, type='image/webp')
+                  img(src='/assets/images/hearthyapp.png' + tag, alt='hearthyapp')
+              .item.right
+                h2 Hearthyapp
+                p With this app patients and doctors can make online consultations, share photos and videos and create health milestones in their PHR.
+                .soon Coming soon
+      //- section#roadmap
+      //-   .roadmap-intro
+      //-     .container
+      //-       h1#roadmap-title
+      //-         strong Roadmap
+      //-       .split
+      //-         .item.left
+      //-           p Hearthy Co. works as a startup, it defines a manageable problem and tries to solve it with defined milestones and small tranches of funding. Hearthy Co will be funded by Hearthy Foundation as it reaches its milestones. Hearthy Co. Milestones are stated below: 
+
+      //-         .item.right
+      //-           p Hearthy Co is currently an established company, and merged with Glue Digital. Hearthy, as Glue Digital, has been unfunded since the start, at the same time having its own clients and actually having its own developments. 
+      //-   .roadmap-image
+      //-     .container
+      //-       picture#map
+      //-         source(srcset='/assets/images/roadmap/roadmap-image-mobile.png' + tag, media='(max-width: 420px)')
+      //-         source(srcset='/assets/images/roadmap/roadmap-image.webp' + tag, type='image/webp')
+      //-         img(src='/assets/images/roadmap/roadmap-image.png' + tag, alt='roadmap')
+      //-       picture#roadmap-1.illustration
+      //-         source(srcset='/assets/images/roadmap/roadmap-1.webp' + tag, type='image/webp')
+      //-         img(src='/assets/images/roadmap/roadmap-1.png' + tag, alt='roadmap app illustration')
+      //-       picture#roadmap-2.illustration
+      //-         source(srcset='/assets/images/roadmap/roadmap-2.webp' + tag, type='image/webp')
+      //-         img(src='/assets/images/roadmap/roadmap-2.png' + tag, alt='roadmap medication illustration')
+      //-       picture#roadmap-3.illustration
+      //-         source(srcset='/assets/images/roadmap/roadmap-3.webp' + tag, type='image/webp')
+      //-         img(src='/assets/images/roadmap/roadmap-3.png' + tag, alt='roadmap book illustration')
+      //-       picture#roadmap-4.illustration
+      //-         source(srcset='/assets/images/roadmap/roadmap-4.webp' + tag, type='image/webp')
+      //-         img(src='/assets/images/roadmap/roadmap-4.png' + tag, alt='roadmap rocket illustration')
+
       section#team
         .particles
           picture#team-particle-4.particle
@@ -210,11 +278,21 @@ html(lang="es")
               a.link(href="https://slack-hearthy-.herokuapp.com/", target='_blank')
                 .icon.icon-slack2
                 .text Slack
-              a.link(href="")
-                .icon.icon-reddit2
-                .text Reddit
-              a.link(href="")
-                .icon.icon-bitcoin2
-                .text Bitcoin Talk
+              //- a.link(href="")
+              //-   .icon.icon-reddit2
+              //-   .text Reddit
+              //- a.link(href="")
+              //-   .icon.icon-bitcoin2
+              //-   .text Bitcoin Talk
+              a.link(href='https://twitter.com/hearthyco', target='_blank')
+                .icon.icon-twitter2
+                .text Twitter
+              a.link(href='https://github.com/hearthyco', target='_blank')
+                .icon.icon-github2
+                .text Github
+              a.link(href='https://medium.com/@gluegl/', target='_blank')
+                .icon.icon-medium2
+                .text Medium
 
     +footer()
+    +contactSlack()

@@ -14,7 +14,7 @@ $featured-height: 1.5 * $nav-height
       max-height: $desktop-width - $nav-height
       height: calc(100vh - (2.5 * #{$nav-height}))
       position: relative
-      z-index: 1
+      z-index: 100
       +mobile
         max-height: $desktop-width - $nav-height-mobile
         min-height: $mobile-height - (3.5 * $nav-height-mobile)
@@ -254,11 +254,13 @@ $featured-height: 1.5 * $nav-height
       #animation-1
         background-image: image-url('animations/animation-1.png')
         width: 592px
+        animation-timing-function: steps(28)
         +mobile
           +bg-image(contain, 'animations/illustration-1.png')
       #animation-2
         background-image: image-url('animations/animation-2.png')
         width: 591px
+        animation-timing-function: steps(28)
         +mobile
           +bg-image(contain, 'animations/illustration-2.png')
       #animation-3
@@ -268,7 +270,8 @@ $featured-height: 1.5 * $nav-height
           +bg-image(contain, 'animations/illustration-3.png')
       #animation-4
         background-image: image-url('animations/animation-4.png')
-        width: 388px
+        width: 250px
+        animation-timing-function: steps(30)
         +mobile
           +bg-image(contain, 'animations/illustration-4.png')
       #animation-5
@@ -375,6 +378,91 @@ $featured-height: 1.5 * $nav-height
           bottom: -28px
           left: 50%
           margin-left: -70px
+    #apps
+      .apps-intro
+        text-align: center
+        padding: 40px 0
+        +mobile
+          padding: 10px 0
+        #apps-title
+          margin-top: 10px
+          +text-gradient(left, $secondary-color, $primary-color)
+          display: inline-block
+        p
+          max-width: 600px
+          margin-left: auto
+          margin-right: auto
+      .section
+        padding: 40px 0
+        h2
+          +text-gradient(right ,$orange, $secondary-color)
+          display: inline-block
+          @extend %font-size-xl
+          margin-top: 0
+        p
+          max-width: $tablet-width / 2
+        .split
+          align-items: center
+        .left
+          text-align: center
+        .soon
+          box-sizing: border-box
+          border-radius: $base-border-radius * 10
+          padding: 12px 15px 8px
+          font-weight: bold
+          border: 1px solid $medium-gray
+          display: inline-block
+          background-color: $transparent
+          // cursor: not-allowed
+          font-family: $heading-font-family
+          text-transform: uppercase
+        +mobile
+          padding: 10px 0 20px
+      #hearthy-bot
+        background-color: $light-yellow
+    #roadmap
+      .roadmap-intro
+        background-image: linear-gradient(to left,$orange, $secondary-color)
+        color: $white
+        padding: 40px 0
+        +mobile
+          padding: 20px 0
+        .item
+          p
+            max-width: 550px
+          +tablet
+            padding: 0 20px
+      .roadmap-image
+        text-align: center
+        background-color: $light-yellow
+        padding: 40px 0
+        .container
+          position: relative
+        .illustration
+          position: absolute
+          display: none
+          transform: translateY(50%)
+          opacity: 0
+          transition: all 0.3s ease-in-out
+          &.appear
+            opacity: 1
+            transform: translateY(0)
+          +desktop
+            display: block
+        #roadmap-1
+          top: 75px
+          left: 30px
+        #roadmap-2
+          top: 200px
+          right: 30px
+        #roadmap-3
+          bottom: 175px
+          left: 30px
+        #roadmap-4
+          bottom: 75px
+          right: 30px
+        +mobile
+          padding: 10px 0
     #team
       position: relative
       background-color: $white
@@ -468,6 +556,7 @@ $featured-height: 1.5 * $nav-height
           padding: 30px 5px
           +mobile
             padding: 5px
+            width: 33.3%
           .icon
             font-size: $font-size-xxxl * 2.5
             +text-gradient(left, $white, $white)
@@ -492,13 +581,13 @@ $featured-height: 1.5 * $nav-height
   0%
     background-position: left center
   100%
-    background-position: -18352px center
+    background-position: -16576px center
 
 @keyframes playSecondAnimation
   0%
     background-position: left center
   100%
-    background-position: -18330px center
+    background-position: -16548px center
 
 @keyframes playThirdAnimation
   0%
@@ -510,7 +599,7 @@ $featured-height: 1.5 * $nav-height
   0%
     background-position: left center
   100%
-    background-position: -12028px center
+    background-position: -7500px center
 
 @keyframes playFifthAnimation
   0%

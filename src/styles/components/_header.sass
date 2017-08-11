@@ -5,7 +5,7 @@
   top: 0
   left: 0
   right: 0
-  z-index: 10
+  z-index: 1000
   +mobile
     height: $nav-height-mobile
   .container
@@ -18,32 +18,38 @@
       vertical-align: middle
     +mobile
       max-width: 140px
-  .talk a
-    display: inline-block
-    text-align: center
-    vertical-align: middle
-    +desktop
-      min-width: 60px
+  .talk
     +mobile
-      margin: 0
-    .text
-      font-size: $font-size-xs
-      +color-hover($base-font-color)
-      display: none
+      position: fixed
+      bottom: 0
+      right: 0
+    a
+      display: inline-block
+      text-align: center
+      vertical-align: middle
       +desktop
-        display: block
-        margin-top: -3px
-    .icon
-      background-color: tint($cyan, 30%)
-      border-radius: 100%
-      margin: auto
-      +event
-        background-color: $cyan
-      color: $white
-      +tablet
-        margin: auto 5px
-
-      +size(32px)
-      font-size: $font-size-xxl
-      line-height: $font-size-xxl
-      margin: 3px
+        min-width: 60px
+      +mobile
+        margin: 0
+      .text
+        font-size: $font-size-xs
+        +color-hover($base-font-color)
+        display: none
+        +desktop
+          display: block
+          margin-top: -3px
+      .icon
+        background-color: tint($cyan, 30%)
+        border-radius: 100%
+        margin: auto
+        +event
+          background-color: $cyan
+        color: $white
+        +tablet
+          margin: auto 5px
+        +mobile
+          box-shadow: $shadow
+        +size(32px)
+        font-size: $font-size-xxl
+        line-height: $font-size-xxl
+        margin: 3px
