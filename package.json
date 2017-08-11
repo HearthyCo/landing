@@ -2,16 +2,15 @@
   "name": "hearthyco-landing",
   "version": "0.1.0",
   "description": "The HearthyCo Landing page",
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HearthyCo/landing"
+  },
   "private": true,
   "main": "index.js",
   "scripts": {
     "start": "gulp",
     "heroku-postbuild": "gulp build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/HearthyCo/landing"
   },
   "author": "Glue.gl",
   "license": "ISC",
@@ -39,5 +38,8 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "parallastic": "^1.0.5"
   }
 }
