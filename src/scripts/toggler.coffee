@@ -16,15 +16,18 @@ document.addEventListener 'DOMContentLoaded', ->
     p.addToggler issue3, 'ease-in', 0.5, true # for reverse, (remove classname)
     p.addToggler issue3, 'ease-out', 1.1, true
 
-    issue4 = document.querySelector('#issue-4 .split')
-    p.addToggler issue4, 'ease-in', 0.5, true # for reverse, (remove classname)
-    p.addToggler issue4, 'ease-out', 1.1, true
+    # issue4 = document.querySelector('#issue-4 .split')
+    # p.addToggler issue4, 'ease-in', 0.5, true # for reverse, (remove classname)
+    # p.addToggler issue4, 'ease-out', 1.1, true
 
     issue5 = document.querySelector('#issue-5 .split')
     p.addToggler issue5, 'ease-in', 0.5, true # for reverse, (remove classname)
     p.addToggler issue5, 'ease-out', 1.1, true
 
     p.addToggler document.getElementById('how-image'), 'play', 0.25, true
+
+    p.addToggler document.querySelector('#hearthy-bot img'), 'appear', 0.2, true
+    p.addToggler document.querySelector('#hearthy-app img'), 'appear', 0.2, true
 
     p.addToggler document.getElementById('roadmap-1'), 'appear', 0.25, true
     p.addToggler document.getElementById('roadmap-2'), 'appear', 0.35, true
