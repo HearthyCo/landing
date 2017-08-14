@@ -4,6 +4,14 @@ document.addEventListener 'DOMContentLoaded', ->
   if  window.innerWidth > 567
     p = parallastic(window)
 
+    contactSlack = document.getElementById 'contact-slack'
+    window.addEventListener 'scroll', (e) ->
+      console.log('>>', contactSlack, window.scrollTop)
+      if window.scrollY
+        contactSlack.classList.add 'show'
+      else
+        contactSlack.classList.remove 'show'
+
     issue1 = document.querySelector('#issue-1 .split')
     p.addToggler issue1, 'ease-in', 0.6, true # for reverse, (remove classname)
     p.addToggler issue1, 'ease-out', 1.1, true

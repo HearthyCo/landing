@@ -1,6 +1,6 @@
 #contact-slack
   position: fixed
-  bottom: 10px
+  bottom: 55px
   right: 10px
   background-color: rgba($white, 0.75)
   border-radius: 30px
@@ -9,25 +9,19 @@
   font-size: $font-size-xl
   color: $base-font-color
   display: block
-  animation: slackAppear 0.5s ease-in-out both 2.5s
   transform: translateX(130%)
   border: 1px solid rgba($light-gray, 0.5)
+  transition: transform 0.6s ease-in-out
+  &.show
+    transform: translateX(0%)
   +tablet
     padding: 7px 15px
   strong, span
     vertical-align: middle
   .icon
     font-size: $font-size-xxxl
-    color: $dark-gray
   strong
     text-decoration: underline
     color: $violet
   +mobile
     display: none
-
-
-@keyframes slackAppear
-  from
-    transform: translateX(130%)
-  to
-    transform: translateX(0%)
