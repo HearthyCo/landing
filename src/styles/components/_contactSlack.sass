@@ -9,12 +9,25 @@
   font-size: $font-size-xl
   color: $base-font-color
   display: block
+  animation: slackAppear 0.5s ease-in-out both 2.5s
+  transform: translateX(130%)
+  border: 1px solid rgba($light-gray, 0.5)
+  +tablet
+    padding: 7px 15px
   strong, span
     vertical-align: middle
   .icon
     font-size: $font-size-xxxl
+    color: $dark-gray
   strong
     text-decoration: underline
     color: $violet
   +mobile
     display: none
+
+
+@keyframes slackAppear
+  from
+    transform: translateX(130%)
+  to
+    transform: translateX(0%)
