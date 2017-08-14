@@ -17,7 +17,7 @@ document.addEventListener 'DOMContentLoaded', ->
     p.addToggler issue3, 'ease-out', 1.1, true
 
     # issue4 = document.querySelector('#issue-4 .split')
-    # p.addToggler issue4, 'ease-in', 0.5, true # for reverse, (remove classname)
+    # p.addToggler issue4, 'ease-in', 0.5, true
     # p.addToggler issue4, 'ease-out', 1.1, true
 
     issue5 = document.querySelector('#issue-5 .split')
