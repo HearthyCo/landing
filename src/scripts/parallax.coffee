@@ -108,7 +108,7 @@ document.addEventListener 'DOMContentLoaded', ->
 
   if  window.innerWidth > 567
     p.addProportional document.getElementById('how'),
-      0, 100, 'transform', 0, -85,
+      0, 100, 'transform', 0, -35,
         prefix: 'translate3d(0,'
         suffix: '%,0)'
         units: '%'
