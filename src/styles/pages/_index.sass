@@ -116,6 +116,7 @@ $featured-height: 1.5 * $nav-height
         padding: 0
         +mobile
           display: block
+          padding-top: 10px
         & > div
           vertical-align: middle
           position: relative
@@ -129,23 +130,32 @@ $featured-height: 1.5 * $nav-height
           @extend %font-size-l
           font-weight: bold
           padding-left: 10px
-          
+          +tablet
+            flex: 1 1 25%
+          +mobile
+            height: 25px
 
         .logo
           flex: 1 1 40%
           +mobile
             display: inline-block
+            width: 33%
       #health20
         +bg-image(contain, 'featured/health20.png')
         background-size: 45%
         +mobile
-          background-size: 130px
+          background-size: 90px
 
       #launchpad
         +bg-image(contain, 'featured/launchpad.png')
         background-size: 45%
         +mobile
-          background-size: 130px
+          background-size: 90px
+      #pirates
+        +bg-image(contain, 'featured/pirates.png')
+        background-size: 45%
+        +mobile
+          background-size: 90px
 
     #explanation
       padding: 70px 0 30px
@@ -313,6 +323,20 @@ $featured-height: 1.5 * $nav-height
             color: $cyan
         strong
           color: tint($cyan, 40%)
+      p
+        max-width: $tablet-width
+        margin-left: auto
+        margin-right: auto
+        text-align: left
+      .container
+        text-align: center
+      .button
+        +button($white)
+        margin-top: 20px
+        background: $transparent
+        padding: 14px 20px 12px
+        +event
+          color: $blue
       .item
         padding: 0 40px
         +mobile
@@ -446,16 +470,16 @@ $featured-height: 1.5 * $nav-height
           +desktop
             display: block
         #roadmap-1
-          top: 75px
+          top: 50px
           left: 30px
         #roadmap-2
           top: 200px
           right: 30px
         #roadmap-3
-          bottom: 175px
+          bottom: 200px
           left: 30px
         #roadmap-4
-          bottom: 75px
+          bottom: 50px
           right: 30px
         +mobile
           padding: 10px 0
