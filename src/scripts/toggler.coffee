@@ -6,7 +6,6 @@ document.addEventListener 'DOMContentLoaded', ->
 
     contactSlack = document.getElementById 'contact-slack'
     window.addEventListener 'scroll', (e) ->
-      console.log('>>', contactSlack, window.scrollTop)
       if window.scrollY
         contactSlack.classList.add 'show'
       else
