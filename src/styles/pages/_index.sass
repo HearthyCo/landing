@@ -14,11 +14,11 @@ $featured-height: 1.5 * $nav-height
       max-height: $desktop-width - $nav-height
       height: calc(100vh - (2.5 * #{$nav-height}))
       position: relative
-      z-index: 100
+      z-index: 10
       +mobile
         max-height: $desktop-width - $nav-height-mobile
         min-height: $mobile-height - (3.5 * $nav-height-mobile)
-        height: calc(100vh - (4 * #{$nav-height-mobile}))
+        height: calc(100vh - (3 * #{$nav-height-mobile}))
       .bg-particles
         position: absolute
         top: 0
@@ -102,63 +102,51 @@ $featured-height: 1.5 * $nav-height
             animation: layers-appear 0.5s ease-in-out both
             animation-delay: 1s
     #featured
+      background-image: linear-gradient(to right,$secondary-color, $orange)
       position: relative
       z-index: 1
-      background-image: linear-gradient(to right, $yellow 50%, $white 51%, $white)
       height: $featured-height
       +mobile
-        height: $nav-height-mobile * 3
-        background: $white
+        height: $nav-height-mobile * 2
       .container
         display: flex
         align-items: center
         position: relative
         height: 100%
         padding: 0
-        background-color: $white
         +mobile
-          flex-direction: column
+          display: block
         & > div
           vertical-align: middle
           position: relative
           height: 100%
-          &:after
-            content: ''
-            position: absolute
           +mobile
-            width: 100%
             height: $nav-height-mobile
-            &:after
-              display: none
+            width: 50%
         .featured
           flex: 1 1 20%
           color: $white
           @extend %font-size-l
           font-weight: bold
-          background-color: $yellow
-          line-height: $featured-height
           padding-left: 10px
-          +mobile
-            line-height: $nav-height-mobile
-            text-align: center
-            padding-left: 0px
+          
+
         .logo
           flex: 1 1 40%
+          +mobile
+            display: inline-block
       #health20
         +bg-image(contain, 'featured/health20.png')
         background-size: 45%
         +mobile
           background-size: 130px
-        &:after
-          +triangle(right, $featured-height, tint($light-gray, 75%))
+
       #launchpad
         +bg-image(contain, 'featured/launchpad.png')
         background-size: 45%
-        background-color: tint($light-gray, 75%)
         +mobile
           background-size: 130px
-        &:after
-          +triangle(right, $featured-height, $yellow)
+
     #explanation
       padding: 70px 0 30px
       background-color: $white
@@ -405,6 +393,13 @@ $featured-height: 1.5 * $nav-height
           align-items: center
         .left
           text-align: center
+          img
+            transform: translateX(-50%)
+            opacity: 0
+            transition: all 0.3s ease-in-out
+            &.appear
+              opacity: 1
+              transform: translateX(0)
         .soon
           box-sizing: border-box
           border-radius: $base-border-radius * 10
@@ -424,14 +419,15 @@ $featured-height: 1.5 * $nav-height
       .roadmap-intro
         background-image: linear-gradient(to left,$orange, $secondary-color)
         color: $white
-        padding: 40px 0
+        padding: 40px 0 60px
+        text-align: center
         +mobile
           padding: 20px 0
-        .item
-          p
-            max-width: 550px
-          +tablet
-            padding: 0 20px
+        p
+          max-width: 550px
+          margin: auto
+        +tablet
+          padding: 0 20px
       .roadmap-image
         text-align: center
         background-color: $light-yellow
