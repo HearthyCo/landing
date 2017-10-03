@@ -1,0 +1,54 @@
+#modal-accept
+  padding: 20px
+  position: fixed
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  z-index: 10000
+  align-items: center
+  justify-content: center
+  display: flex
+  pointer-events: none
+  opacity: 0
+  &.active
+    pointer-events: auto
+    opacity: 1
+  .veil
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    background-color: rgba($black, 0.5)
+  .content
+    position: relative
+    background-color: $white
+    max-width: $desktop-width / 2
+    max-height: 90vh
+    display: flex
+    flex-direction: column
+    .terms
+      flex: 1 1 auto
+      height: 100
+      overflow-y: auto
+      padding: 10px 15px
+      h2
+        display: inline-block
+        +text-gradient(left, $secondary-color, $primary-color)
+    .buttons
+      text-align: right
+      flex: 0 0 auto
+      height: 70px
+      background-color: $light-yellow
+      +mobile
+        text-align: center
+        height: 60px
+    .button
+      margin: 10px
+      +mobile
+        margin: 10px 5px
+    #cancel-button
+      background-image: none
+      background-color: $gray
+    #accept-button
