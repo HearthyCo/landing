@@ -1,0 +1,74 @@
+#presale
+  #intro
+    background-image: linear-gradient(to right,$primary-color 65%, $secondary-color)
+    width: 100%
+    display: flex
+    align-items: center
+    overflow: hidden
+    color: $white
+    min-height: $mobile-height
+    max-height: $desktop-width
+    height: 100vh
+    position: relative
+    z-index: 10
+    .bg-particles
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+    #bg-intro-particles1
+      +bg-image(inherit, 'particles/bg-particles-presale1.png')
+    #bg-intro-particles2
+      +bg-image(cover, 'particles/bg-particles-presale2.png')
+    .particle
+      position: absolute
+    #intro-particle-4
+      left: 60%
+      top: 10%
+    #intro-particle-3
+      left: 40%
+      top: 80%
+    #intro-particle-2
+      left: 0%
+      top: 30%
+    #intro-particle-1
+      right: 0%
+      bottom: 10%
+      +mobile
+        opacity: 0.25
+    .split
+      position: relative
+    .item
+      &.left
+        display: flex
+        align-items: center
+      &.right
+        +mobile
+          display: none
+      h1
+        animation: layers-appear 0.5s ease-in-out both
+        animation-delay: 0.3s
+        margin-bottom: 10px
+        color: $golden
+      h3
+        animation: layers-appear 0.5s ease-in-out both
+        animation-delay: 0.45s
+        margin-top: 0
+      strong
+        margin-right: 0.2em
+      p
+        animation: layers-appear 0.5s ease-in-out both
+        animation-delay: 0.6s
+        padding-right: 20px
+        line-height: 1.7em
+        strong
+          color: $golden
+        +mobile
+          padding-right: 0
+      .button
+        +bg-color-hover($orange)
+        background-image: none
+        animation: layers-appear 0.5s ease-in-out both
+        animation-delay: 0.9s
+        margin-top: 40px

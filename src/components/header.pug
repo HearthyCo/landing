@@ -1,9 +1,10 @@
 mixin header()
   header#header
     .container
-      picture.logo
-        source(srcset='/assets/images/logo.svg' + tag, type='image/svg+xml')
-        img(src='/assets/images/logo.png' + tag, alt='logo')
+      a(href="/").logo
+        picture
+          source(srcset='/assets/images/logo.svg' + tag, type='image/svg+xml')
+          img(src='/assets/images/logo.png' + tag, alt='logo')
       .talk
         a(href='https://slack-invite.hearthy.co', target='_blank')
           .icon.icon-slack1

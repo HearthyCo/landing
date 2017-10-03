@@ -1,0 +1,60 @@
+include ../components/header
+include ../components/footer
+include ../components/analytics
+include ../components/contactSlack
+
+doctype html
+html(lang="es")
+  head
+    title HearthyCo | Presale
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(description='')
+
+    link(rel="shortcut icon", href="/assets/favicon.ico" + tag, type="image/x-icon")
+    link(href='style.css' + tag, rel='stylesheet')
+    script(src='main.js' + tag)
+    +analytics()
+  body#presale.page
+    +header()
+    #content-page
+      section#intro
+        #bg-intro-particles1.bg-particles
+        #bg-intro-particles2.bg-particles
+        .particles
+          picture#intro-particle-4.particle
+            source(srcset='/assets/images/particles/particle-4.webp' + tag, type='image/webp')
+            img(src='/assets/images/particles/particle-4.png' + tag, alt='partilcle')
+          picture#intro-particle-3.particle
+            source(srcset='/assets/images/particles/particle-3.webp' + tag, type='image/webp')
+            img(src='/assets/images/particles/particle-3.png' + tag, alt='partilcle')
+          picture#intro-particle-2.particle
+            source(srcset='/assets/images/particles/coin-2.webp' + tag, type='image/webp')
+            img(src='/assets/images/particles/coin-2.png' + tag, alt='partilcle')
+        .container.split
+          .item.left
+            .item-content
+              h1#intro-title
+                span Join the 
+                strong presale
+                span now
+              h3 October 15th - November 15th
+              p
+                span Hearthy Presale will open on October 15th, Presale will reserve a maximum of 
+                strong 6.000 ETH
+                span , with a 45% Bonus. Hearthy Presale is an excellent opportunity to be a part of one of the most exciting projects in the blockchain sphere.
+              a(href="/", target='_blank').button Join the Whitelist
+          .item.right
+            picture#layer-3.layer
+              source(srcset='/assets/images/presale/presale-illustration.webp' + tag, type='image/webp')
+              img(src='/assets/images/presale/presale-illustration.png' + tag, alt='presale-illustration image')
+
+        .particles
+          picture#intro-particle-1.particle
+            source(srcset='/assets/images/particles/coin-1.webp' + tag, type='image/webp')
+            img(src='/assets/images/particles/coin-1.png' + tag, alt='partilcle')
+
+    section Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod soluta facere natus sapiente a sed, eligendi aliquid cum cumque nulla. Voluptates explicabo, animi quo provident quas sint dolorem fugiat alias.
+    +footer()
+    +contactSlack()
