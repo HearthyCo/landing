@@ -57,7 +57,9 @@ html(lang="es")
 
       section#presale-terms
         .container
-          h1#presale-terms-title Hearthy presale terms
+          h1#presale-terms-title 
+            strong Hearthy 
+            span presale terms
           h2
             span The Hearthy Presale aims to raise a maximum of 
             strong 6.000 ETH.
@@ -121,14 +123,44 @@ html(lang="es")
           h1#keydates-title Keydates
           p Presale will be opened from October 15 2017 to November 15. ICO will be opened the first week of December, and will remain opened for  a maximum of 3 weeks.
           .keydates-graph
-          picture#keydates-illustration
-            source(srcset='/assets/images/presale/keydates-illustration.webp' + tag, type='image/webp')
-            img(src='/assets/images/presale/keydates-illustration.png' + tag, alt='keydates-illustration image')
+          table.keydates-table
+            thead
+              tr
+                th Period
+                th Bonus
+                th Amount
+            tbody
+              tr
+                td Presale
+                td 45%
+                td 8.700.000
+              tr
+                td Early ICO
+                td 20%
+                td 6.000.000
+              tr
+                td Early ICO
+                td 10%
+                td 11.000.000
+              tr
+                td Early ICO
+                td 5%
+                td 15.750.000
+              tr
+                td ICO
+                td No bonus
+                td 30.000.000
+
+          //- picture#keydates-illustration
+          //-   source(srcset='/assets/images/presale/keydates-illustration.webp' + tag, type='image/webp')
+          //-   img(src='/assets/images/presale/keydates-illustration.png' + tag, alt='keydates-illustration image')
       section#governance
         .container
           .split
             .item.left
-              h1#governance-title Token Design and Post ICO Governance
+              h1#governance-title
+                span Token 
+                strong Design and Post ICO Governance
               p The primary use of tokens is for their owners to receive medical services by using them.Therefore the patients, health care organizations and doctors can use tokens in their daily health care-related transactions. Reaching project milestones deadlines  will trigger tokenholder votations.
               p The ownership of the HER tokens give political and partial refund rights to the token owners, when the project’s milestones are reached. (example testnet ready milestone) token owners will have the right to ask for a refund if the majority of the holders believes the team hasn’t matched the milestone correctly.
               p If more than 50% vote the project to be discontinued the project will stop and all the remaining funds stored will be refunded in form of ETH.

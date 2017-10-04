@@ -26,17 +26,23 @@
     #intro-particle-4
       left: 60%
       top: 10%
+      +mobile
+        opacity: 0.75
     #intro-particle-3
       left: 40%
       top: 80%
+      +mobile
+        opacity: 0.75
     #intro-particle-2
       left: 0%
       top: 15%
+      +mobile
+        opacity: 0.35
     #intro-particle-1
       right: 0%
       bottom: 10%
       +mobile
-        opacity: 0.25
+        opacity: 0.35
     .split
       position: relative
     .item
@@ -47,8 +53,9 @@
         text-align: center
         picture
           display: block
-          img
-            height: 449px
+          +desktop
+            img
+              height: 449px
         +mobile
           display: none
       h1
@@ -77,3 +84,152 @@
         animation: layers-appear 0.5s ease-in-out both
         animation-delay: 0.9s
         margin-top: 40px
+
+  #presale-terms
+    padding: 70px 0 100px
+    background-color: $white
+    +mobile
+      padding: 20px 0 40px
+    h1
+      display: inline-block
+      +text-gradient(left, $secondary-color, $primary-color)
+    h2
+      max-width: $desktop-width / 2
+      margin-top: 0
+      strong
+        color: $golden
+    .split
+      .item
+        padding: 10px
+        +desktop
+          &.left
+            padding-left: 0
+          &.right
+            padding-right: 0
+    .example
+      h3
+        display: inline-block
+        +text-gradient(left, $secondary-color, $primary-color)
+      .split
+        background-color: tint($yellow, 85%)
+        padding: 10px
+        .item
+          padding: 5px 15px
+  #ico
+    color: $white
+    padding: 50px 0 70px
+    background-image: linear-gradient(to right, $secondary-color, $orange)
+    h3
+      strong
+        color: $golden
+    +mobile
+      padding: 20px 0 40px
+    .split
+      align-items: center
+      .right
+        text-align: center
+        +mobile
+          margin: 40px auto
+    ul li
+      list-style: disc inside
+      padding: 3px 0
+    // #presale-illustration
+    //   display: block
+    //   transform: translateX(50%)
+    //   opacity: 0
+    //   transition: all 0.3s ease-in-out
+    //   &.appear
+    //     opacity: 1
+    //     transform: translateX(0%)
+  #keydates
+    padding: 50px 0
+    background-color: $white
+    text-align: center
+    .container
+      position: relative
+      // padding-bottom: 200px
+      // +mobile
+      //   padding-bottom: 120px
+    h1
+      display: inline-block
+      +text-gradient(left, $secondary-color, $primary-color)
+      font-weight: bold
+    p
+      max-width: $desktop-width / 2
+      padding: 10px 20px
+      margin: auto
+    +mobile
+      padding: 20px 0 40px
+    .keydates-graph
+      height: 95px
+      +bg-image(contain, 'presale/keydates-graph.png')
+      margin-top: 30px
+    .keydates-table
+      max-width: $desktop-width / 2
+      width: 100%
+      text-align: left
+      margin: 50px auto
+      +mobile
+        margin: 30px auto
+      thead
+        background-image: linear-gradient(to right, $secondary-color, $primary-color)
+        color: $white
+      th
+        padding: 20px
+        box-shadow: inset 0 0 0 4px $white
+        +mobile
+          padding: 20px 10px
+      td
+        padding: 10px 20px
+        box-shadow: inset 0 0 0 4px $white
+        +mobile
+          padding: 10px
+      tbody
+        tr
+          background-color: tint($yellow, 85%)
+          &:nth-child(even)
+            background-color: tint($yellow, 75%)
+    // #keydates-illustration
+    //   position: absolute
+    //   height: 200px
+    //   right: 0
+    //   bottom: 0
+    //   +tablet
+    //     width: 100%
+    //     padding-top: 30px
+    //   +mobile
+    //     width: 100%
+    //     height: 100px
+  #governance
+    padding: 50px 0
+    background-color: tint($yellow, 85%)
+    +mobile
+      padding: 20px 0 40px
+    h1
+      display: inline-block
+      +text-gradient(left, $orange, $secondary-color)
+    .split
+      align-items: center
+      +tablet
+        flex-direction: column
+    .item
+      picture
+        display: block
+        margin: auto
+        text-align: center
+      +tablet
+        flex: 0 0 100%
+        width: 100%
+        height: 100%
+      .right
+        text-align: center
+        +mobile
+          margin: 40px auto
+      // #governance-illustration
+      //   display: block
+      //   transform: translateX(50%)
+      //   opacity: 0
+      //   transition: all 0.3s ease-in-out
+      //   &.appear
+      //     opacity: 1
+      //     transform: translateX(0%)
