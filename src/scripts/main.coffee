@@ -2,4 +2,4 @@
 require './parallax'
 require './toggler'
 require './newsletter'
-require './closeModal'
+require './toggleModal'

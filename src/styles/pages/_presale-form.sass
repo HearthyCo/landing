@@ -1,0 +1,79 @@
+#presale-form
+  #intro
+    .back
+      color: $black
+      span
+        vertical-align: top
+        margin-left: 5px
+
+    .text-intro
+      display: flex
+      align-items: center
+      flex-direction: column
+      text-align: center
+      +desktop
+        flex-direction: row
+        text-align: left
+    h1
+      +text-gradient(left, $secondary-color, $primary-color)
+      display: inline-block
+      margin: 10px 0
+      +desktop
+        padding-right: 20px
+        border-right: 1px solid $primary-color
+        margin: 25px 0
+      strong, span
+        display: block
+
+    h3
+      padding: 0 10px
+      font-weight: 400
+      max-width: 650px
+      +desktop
+        padding: 0 40px
+  section
+    padding: 20px 0
+  .inputs
+    display: flex
+    flex-wrap: wrap
+  input
+    background-color: $transparent
+    border: 1px solid $gray
+    flex: 1 1 auto
+    width: 100%
+    max-width: 340px
+    margin: 10px
+    &#amount
+      max-width: 220px
+  label
+    display: flex
+    align-items: center
+    max-width: 350px
+    .icon
+      font-size: $font-size-xxxl
+      align-items: center
+      flex: 0 0 auto
+      +mobile
+        display: none
+      &.icon-twitter2
+        +color-hover($social-twitter)
+      &.icon-linkedin2
+        +color-hover($social-linkedin)
+      &.icon-eth2
+        +color-hover($social-eth)
+    input
+      flex: 1 1 auto
+      width: 300px
+
+  #required
+    h4
+      display: inline-block
+      +text-gradient(left, $secondary-color, $primary-color)
+  #optional
+    background-color: tint($yellow, 85%)
+    h4
+      color: $orange
+  button
+    background-image: linear-gradient(to right, $secondary-color, $orange)
+    +event
+      background-image: linear-gradient(to right, darken($secondary-color, 5%), darken($orange, 5%))

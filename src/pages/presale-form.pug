@@ -16,25 +16,42 @@ html(lang="es")
     link(href='style.css' + tag, rel='stylesheet')
     script(src='main.js' + tag)
     +analytics()
-  body#presale-form.page.blocked
+  body#presale-form.page
     +modal-accept
     +header()
     #content-page
       section#intro
         .container
+          a(href='/presale').back
+            img(src='/assets/images/presale/back.png' + tag, alt='back arrow')
+            span Back
+          .text-intro
+            h1 
+              strong Join us in the 
+              span future healthcare
+            h3 Hearthy Presale is whitelisted, to join the whitelist just send us your contact details, our team will contact you in the follow 24/48 h. For any inquieres contact us on
       form#whitelist(action='', method='POST')
         section#required
           .container
-            input(type='text', placeholder='Your name...', name='name', required)
-            input(type='email', placeholder='Your email...', name='email', required)
-            input(type='number', placeholder='Amount ot ETH...', step='0.5',min='0.5', max='10000', name='ETH', required)
+            h4 Required Fields
+            .inputs
+              input(type='text', placeholder='Your name...', name='name', required)
+              input(type='email', placeholder='Your email...', name='email', required)
+              input(type='number', placeholder='Amount of ETH...', step='1',min='1', max='10000', name='ETH', required)#amount
         section#optional
           .container
-            input(type='text', placeholder='Your public Ethereum adress...', name='Ethereum-adress')
+            h4 Optional Fields
+            .inputs
+              label
+                span.icon.icon-eth2
+                input(type='text', placeholder='Your public Ethereum adress...', name='Ethereum-adress')#ethereum-adress
+              label
+                span.icon.icon-linkedin2
+                input(type='text', placeholder='Your linkedin...', name='linkedin')
+              label
+                span.icon.icon-twitter2
+                input(type='text', placeholder='Your twitter...', name='twitter')
         section#final
           .container
-            label
-              input(type='checkbox', required) 
-              span He leido terminos y cond
-            button(type='submit') Join the Whitelist
+            button#join-whitelist(type='submit') Join the Whitelist
     +footer()

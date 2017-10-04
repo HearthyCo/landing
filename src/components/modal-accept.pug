@@ -1,5 +1,5 @@
 mixin modal-accept()
-  #modal-accept.active
+  #modal-accept
     .veil
     .content
       .terms
@@ -157,10 +157,8 @@ mixin modal-accept()
         p 18. Risks associated with the development and maintenance of the Hearthy Platform: the Hearthy Platform is still under development and may undergo significant changes over time. Although we intend for the HER and Hearthy Platform to function as described in Schedule 1, and intend to take commercially reasonable steps toward those ends, we may have to make changes to the specifications of the HER or the Hearthy Platform for any number of legitimate reasons. Moreover, we have no control over how other participants will use the Hearthy Platform, what products or services will be offered through the Hearthy Platform by third parties, or how third-party products and services will utilize HER (if at all). This could create the risk that the HER or Hearthy Platform, as further developed and maintained, may not meet your expectations at the time of purchase. Furthermore, despite our good faith efforts to develop and participate in the Hearthy Platform, it is still possible that the Hearthy Platform will experience malfunctions or otherwise fail to be adequately developed or maintained, which may negatively impact the Hearthy Platform and HER, and the potential utility of the HER, including the utility of the HER for obtaining services and/or offering rewards and/or being used in the manner intended at the time of the Token Sale.
         p 19. Risk of Competing Platforms: It is possible that alternative platforms could be established that utilize the same open source code and protocol underlying the Hearthy Platform and attempt to facilitate services that are materially similar to the services offered by or within the Hearthy Platform. The Hearthy Platform may compete with these alternatives, which could negatively impact the Hearthy Platform and HER, including the utility of the HER for obtaining services offered by or within the Hearthy Platform.
         p 20. Unanticipated Risks: cryptographic tokens such as HER are a new and untested technology. In addition to the risks set out in this Schedule 2, there are other risks associated with your acquisition, storage, transfer and use of HER, including those that Hearthy may not be able to anticipate. Such risks may further materialize as unanticipated variations or combinations of the risks set out in this Schedule 2.
-
-
-      .buttons
-        a(href="/presale")#cancel-button.button
+      form.buttons
+        a(href='/presale-form')#cancel-button.button
           span I do not accept
-        a(href="")#accept-button.button
+        a(href='/greetings')#accept-button.button
           span Accept
