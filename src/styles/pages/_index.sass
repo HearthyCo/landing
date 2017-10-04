@@ -46,6 +46,30 @@ $featured-height: 1.5 * $nav-height
         opacity: 0.25
     .split
       position: relative
+    .open-presale
+      margin-top: 40px
+      background-color: $yellow
+      padding: 10px 20px 20px
+      border-radius: 25px
+      text-align: center
+      max-width: 420px
+      +mobilescreen
+        padding: 5px 5px 10px
+        margin-top: 10px
+      .presale-link
+        text-align: left
+        display: inline-block
+        padding: 10px 0
+        @extend %font-size-xl
+        .open
+          color: $white
+        .tiny
+          font-size: $font-size-m
+      .button
+        background-image: linear-gradient(to right, $secondary-color, $orange)
+        +event
+          background-image: linear-gradient(to right, darken($secondary-color, 5%), darken($orange, 5%))
+
     .item
       &.left
         flex-basis: 35%
@@ -57,19 +81,23 @@ $featured-height: 1.5 * $nav-height
         flex-basis: 65%
         +tablet
           flex-basis: 50%
+      h1
+        +mobilescreen
+          margin-bottom: 0px
       .line
         animation: layers-appear 0.5s ease-in-out both
         animation-delay: 0.3s
-      strong
-        margin-right: 0.2em
-        display: block
-        +desktop
-          display: inline
+        +mobilescreen
+          font-size: $font-size-xxl
+        strong
+          margin-right: 0.2em
       p
         animation: layers-appear 0.5s ease-in-out both
         animation-delay: 0.6s
         padding-right: 20px
         line-height: 1.7em
+        +mobilescreen
+          line-height: 1.5
         +mobile
           padding-right: 0
       button
@@ -87,8 +115,9 @@ $featured-height: 1.5 * $nav-height
           img
             margin: 0 0 auto auto
             display: block
+            margin-top: 20%
             +tablet
-              margin-top: 20%
+              margin-top: 45%
           +mobile
             display: none
         #layer-1

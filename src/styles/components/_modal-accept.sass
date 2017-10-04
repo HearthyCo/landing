@@ -52,3 +52,6 @@
       background-image: none
       background-color: $gray
     #accept-button
+      background-image: linear-gradient(to right, $secondary-color, $orange)
+      +event
+        background-image: linear-gradient(to right, darken($secondary-color, 5%), darken($orange, 5%))
