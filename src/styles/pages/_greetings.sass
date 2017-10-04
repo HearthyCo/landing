@@ -1,0 +1,31 @@
+#greetings
+  #content-page
+    text-align: center
+    padding-top: 7%
+    +tablet
+      padding-top: 15%
+    h1
+      max-width: $desktop-width / 2
+      display: inline-block
+      +text-gradient(left, $primary-color, $secondary-color)
+      font-weight: bold
+      padding: 0 5%
+    .section
+      background-color: tint($yellow, 75%)
+      height: 300px
+      +mobile
+        height: 200px
+        padding: 10px
+      picture
+        display: block
+      .container
+        position: relative
+        height: 100%
+        img
+          position: absolute
+          top: -100px
+          left: 0
+          +mobile
+            top: 0
+            transform: translateX(50%)
+

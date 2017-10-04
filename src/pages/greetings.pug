@@ -1,0 +1,29 @@
+include ../components/header
+include ../components/footer
+include ../components/analytics
+include ../components/modal-accept
+
+doctype html
+html(lang="es")
+  head
+    title HearthyCo | Presale
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(description='')
+
+    link(rel="shortcut icon", href="/assets/favicon.ico" + tag, type="image/x-icon")
+    link(href='style.css' + tag, rel='stylesheet')
+    script(src='main.js' + tag)
+    +analytics()
+  body#greetings.page
+    +header()
+    #content-page
+      h1 You are already part of the presale!
+      p Thank you for join us.
+      .section
+        .container
+          picture
+            source(srcset='/assets/images/presale/governance-illustration.webp' + tag, type='image/webp')
+            img(src='/assets/images/presale/governance-illustration.png' + tag, alt='governance-illustration image')
+    +footer()
