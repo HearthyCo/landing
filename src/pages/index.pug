@@ -2,7 +2,7 @@ include ../components/header
 include ../components/footer
 include ../components/analytics
 include ../components/team
-include ../components/contactSlack
+include ../components/contactTelegram
 
 doctype html
 html(lang="es")
@@ -255,6 +255,9 @@ html(lang="es")
                 img(src='/assets/images/logo2.png' + tag, alt='logo')
               div 2017
             .contact-links
+              a.link(href='https://t.me/joinchat/FH65F0IDyxLajpe-Kp6ecw')
+                .icon.icon-telegram2
+                .text Telegram
               a.link(href='https://slack-invite.hearthy.co', target='_blank')
                 .icon.icon-slack2
                 .text Slack
@@ -270,9 +273,9 @@ html(lang="es")
               a.link(href='https://github.com/hearthyco', target='_blank')
                 .icon.icon-github2
                 .text Github
-              a.link(href='https://medium.com/@gluegl/', target='_blank')
+              a.link(href='https://medium.com/@hearthy', target='_blank')
                 .icon.icon-medium2
                 .text Medium
 
     +footer()
-    +contactSlack()
+    +contactTelegram()
