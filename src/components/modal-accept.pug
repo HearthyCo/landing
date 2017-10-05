@@ -159,7 +159,8 @@ mixin modal-accept()
         p 20. Unanticipated Risks: cryptographic tokens such as HER are a new and untested technology. In addition to the risks set out in this Schedule 2, there are other risks associated with your acquisition, storage, transfer and use of HER, including those that Hearthy may not be able to anticipate. Such risks may further materialize as unanticipated variations or combinations of the risks set out in this Schedule 2.
       form#accept-zoho.buttons(action=urlZoho, method='POST')
         input#session(type='hidden' name='session' value='')
-        a(href='/presale-form')#cancel-button.button
-          span I do not accept
-        a(href='/greetings')#accept-button.button
-          span Accept
+        a(href='/presale-form')
+          button#cancel-button.button(type='button')
+            span I do not accept
+        button#accept-button.button(type='button')
+            span Accept

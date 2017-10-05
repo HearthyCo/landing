@@ -18,7 +18,7 @@ document.addEventListener 'DOMContentLoaded', ->
   cancelButton.addEventListener 'click', toggleModal
   cancelButton.addEventListener 'touchstart', toggleModal
 
-  joinButton.addEventListener 'click', (evt) ->
+  whitelist.addEventListener 'submit', (evt) ->
     evt.preventDefault()
     fetch whitelist.getAttribute('action'),
       method: 'POST'
