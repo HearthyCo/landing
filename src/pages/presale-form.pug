@@ -30,21 +30,21 @@ html(lang="en")
               strong Join us in the 
               span future healthcare
             h3 Hearthy Presale is whitelisted, to join the whitelist just send us your contact details, our team will contact you in the follow 24/48 h. For any inquieres contact us on
-      form#whitelist(action='', method='POST')
+      form#whitelist(action=urlZoho, method='POST')
         section#required
           .container
             h4 Required Fields
             .inputs
-              input(type='text', placeholder='Your name...', name='name', required)
-              input(type='email', placeholder='Your email...', name='email', required)
-              input(type='number', placeholder='Amount of ETH...', step='1',min='1', max='10000', name='ETH', required)#amount
+              input(type='text', placeholder='Your name...', name='Hearthyco-Landing Name', required)
+              input(type='email', placeholder='Your email...', name='Email', required)
+              input(type='number', placeholder='Amount of ETH...', step='1',min='1', max='10000', name='eth', required)#amount
         section#optional
           .container
             h4 Optional Fields
             .inputs
               label
                 span.icon.icon-eth2
-                input(type='text', placeholder='Your public Ethereum adress...', name='Ethereum-adress')#ethereum-adress
+                input(type='text', placeholder='Your public Ethereum adress...', name='ethereum-adress')#ethereum-adress
               label
                 span.icon.icon-linkedin2
                 input(type='text', placeholder='Your linkedin...', name='linkedin')

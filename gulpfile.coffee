@@ -102,6 +102,7 @@ gulp.task 'pug', ->
     locals:
       tag: '?' + Math.round(Date.now() / 1000),
       urlSubcribe: process.env.URL_MAILCHIMP_SUBSCRIBE
+      urlZoho: process.env.URL_ZOHO
   .on 'error', (err) ->
     console.log err.message
     @emit 'end'

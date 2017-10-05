@@ -2,4 +2,5 @@
 require './parallax'
 require './toggler'
 # require './newsletter'
-require './toggleModal'
+require './presaleForm'
+require './acceptZoho'
