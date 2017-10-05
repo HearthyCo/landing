@@ -1,5 +1,5 @@
 # Your code below
 require './parallax'
 require './toggler'
-require './newsletter'
+# require './newsletter'
 require './toggleModal'
