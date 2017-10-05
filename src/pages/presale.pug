@@ -1,10 +1,10 @@
 include ../components/header
 include ../components/footer
 include ../components/analytics
-include ../components/contactTelegram
+include ../components/joinUs
 
 doctype html
-html(lang="es")
+html(lang="en")
   head
     title HearthyCo | Presale
     meta(charset="utf-8")
@@ -115,7 +115,7 @@ html(lang="es")
                   strong ICO bounties
 
             .item.right
-              picture#presale-illustration
+              picture#ico-illustration
                 source(srcset='/assets/images/presale/ico-terms.webp' + tag, type='image/webp')
                 img(src='/assets/images/presale/ico-terms.png' + tag, alt='ico terms illustration')
       section#keydates
@@ -175,4 +175,4 @@ html(lang="es")
                 source(srcset='/assets/images/presale/governance-illustration.webp' + tag, type='image/webp')
                 img(src='/assets/images/presale/governance-illustration.png' + tag, alt='governance-illustration image')
     +footer()
-    +contactTelegram()
+    +joinUs()
