@@ -40,6 +40,6 @@
     "watchify": "^3.7.0"
   },
   "dependencies": {
-    "parallastic": "^1.0.9"
+    "parallastic": "^1.0.10"
   }
 }
