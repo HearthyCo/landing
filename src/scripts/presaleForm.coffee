@@ -1,22 +1,12 @@
+toggleModal = require './toggleModal'
+
 document.addEventListener 'DOMContentLoaded', ->
-  joinButton = document.getElementById('join-whitelist')
-  return unless joinButton
-  acceptButton = document.getElementById('accept-button')
-  cancelButton = document.getElementById('cancel-button')
+  presalePage = document.querySelector('#presale-form.page')
+  return unless presalePage
+
+  whitelist = document.getElementById 'whitelist'
   modalAccept = document.getElementById('modal-accept')
   session = document.getElementById 'session'
-  toggleModal = (e) ->
-    if modalAccept.classList.contains 'active'
-      modalAccept.classList.remove 'active'
-    else
-      modalAccept.classList.add 'active'
-    e?.preventDefault()
-
-  acceptButton.addEventListener 'click', toggleModal
-  acceptButton.addEventListener 'touchstart', toggleModal
-
-  cancelButton.addEventListener 'click', toggleModal
-  cancelButton.addEventListener 'touchstart', toggleModal
 
   whitelist.addEventListener 'submit', (evt) ->
     evt.preventDefault()
