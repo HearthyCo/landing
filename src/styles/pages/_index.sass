@@ -11,13 +11,12 @@ $featured-height: 1.5 * $nav-height
     color: $white
     min-height: $mobile-height - $nav-height
     max-height: $desktop-width - $nav-height
-    height: calc(100vh - (2.5 * #{$nav-height}))
+    height: 100vh
     position: relative
     z-index: 10
     +mobile
       max-height: $desktop-width - $nav-height-mobile
       min-height: $mobile-height - (3.5 * $nav-height-mobile)
-      height: calc(100vh - (3 * #{$nav-height-mobile}))
     .bg-particles
       position: absolute
       top: 0
@@ -52,7 +51,7 @@ $featured-height: 1.5 * $nav-height
       padding: 10px 20px 20px
       border-radius: 25px
       text-align: center
-      max-width: 420px
+      max-width: 320px
       display: block
       +mobilescreen
         padding: 5px 5px 10px

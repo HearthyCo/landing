@@ -13,16 +13,23 @@
     display: flex
     align-items: center
     justify-content: space-between
+  .button
+    font-size: $font-size-s
+    +mobile
+      font-size: $font-size-xs
   .logo
+    flex: 0 0 300px
     img
       vertical-align: middle
     +mobile
-      max-width: 140px
+      max-width: 120px
   .talk
+    flex: 0 0 300px
     +mobile
       position: fixed
       bottom: 0
       right: 0
+      flex: 1 1 auto
     a
       display: inline-block
       text-align: center
