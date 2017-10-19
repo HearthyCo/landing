@@ -1,0 +1,40 @@
+.member
+  display: inline-block
+  text-align: center
+  padding: 20px
+  +mobile
+    padding: 10px 15px
+  .member-image
+    +size(230px)
+    background-position: center
+    background-size: cover
+    border-radius: 100%
+    margin: auto
+    position: relative
+    display: inline-block
+    +tablet
+      +size(200px)
+    +mobile
+      +size(110px)
+  .name
+    margin: 25px 0 5px
+    text-shadow: $text-shadow
+    font-weight: bold
+    +text-gradient(left, $secondary-color, $primary-color)
+    +mobile
+      margin-top: 10px
+  .position
+    font-weight: bold
+  .icon
+    border-radius: 100%
+    +color-hover($light-gray)
+    // +color-hover($social-linkedin)
+    position: absolute
+    bottom: -20px
+    right: -20px
+    font-size: $font-size-xxxl
+    margin: 0
+    +mobile
+      bottom: -15px
+      right: -15px
+      font-size: $font-size-xxl

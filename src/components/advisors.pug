@@ -1,0 +1,19 @@
+mixin advisors()
+  -
+    var advisors = [
+      {
+        name: "Luis Taboada",
+        imageName: "luis",
+        linkedin: "https://www.linkedin.com/in/luistaboadavillamil/"
+      },{
+        name: "Milind Kamkolkar",
+        imageName: "milind",
+        linkedin: "https://www.linkedin.com/in/milind-kamkolkar-9162301"
+      }
+    ];
+
+  for member in advisors
+    .member
+      a(href=member.linkedin, target='_blank', style='background-image: url("/assets/images/advisors/' + member.imageName + '.jpg' + tag + '")').member-image
+        .icon.icon-linkedin2
+      .name=member.name

@@ -253,6 +253,12 @@ html(lang="en")
           picture#team-coin-1.coin
             source(srcset='/assets/images/particles/coin-1.webp' + tag, type='image/webp')
             img(src='/assets/images/particles/coin-1.png' + tag, alt='coin')
+      section#advisors
+        .container
+          h1#advisors-title
+            strong Advisors
+          .advisors-wrapper
+            +advisors()
       section#contact
         .melt
         .container
