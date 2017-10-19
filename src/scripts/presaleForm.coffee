@@ -7,6 +7,7 @@ document.addEventListener 'DOMContentLoaded', ->
   whitelist = document.getElementById 'whitelist'
   modalAccept = document.getElementById('modal-accept')
   session = document.getElementById 'session'
+  whitelist.params.value = window.localStorage.getItem 'query'
 
   whitelist.addEventListener 'submit', (evt) ->
     evt.preventDefault()
