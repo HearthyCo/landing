@@ -5,7 +5,10 @@ mixin header()
         picture
           source(srcset='/assets/images/logo.svg' + tag, type='image/svg+xml')
           img(src='/assets/images/logo.png' + tag, alt='logo')
-      a(href='/assets/images/Hearthy-whitepaper.pdf', target='_blank').button Download whitepaper
+      .download
+        a(href='/assets/images/Hearthy-whitepaper.pdf', target='_blank')
+          span Whitepaper
+          img(src='/assets/images/icon-download.png' + tag, alt='icon download')
       .talk
         a(href='https://t.me/joinchat/FH65F0IDyxLajpe-Kp6ecw')
           .icon.icon-telegram1
