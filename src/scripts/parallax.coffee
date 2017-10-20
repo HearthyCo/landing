@@ -36,21 +36,6 @@ document.addEventListener 'DOMContentLoaded', ->
         prefix: 'translate3d(0,'
         suffix: '%,0)'
         units: '%'
-    p.addProportional document.getElementById('layer-1'),
-      0, 100, 'transform', 0, 17,
-        prefix: 'translate3d(0,'
-        suffix: '%,0)'
-        units: '%'
-    p.addProportional document.getElementById('layer-2'),
-      0, 100, 'transform', 0, 27,
-        prefix: 'translate3d(0,'
-        suffix: '%,0)'
-        units: '%'
-    p.addProportional document.getElementById('layer-3'),
-      0, 100, 'transform', 0, 35,
-        prefix: 'translate3d(0,'
-        suffix: '%,0)'
-        units: '%'
 
     # Team section
     p.addProportional document.getElementById('team-particle-3'),

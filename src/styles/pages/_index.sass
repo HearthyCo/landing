@@ -103,32 +103,44 @@ $featured-height: 1.5 * $nav-height
       button
         animation: layers-appear 0.5s ease-in-out both
         animation-delay: 0.9s
+        margin-top: 10px
+      #intro-illustration
+        text-align: right
         margin-top: 20px
-      #intro-layers
-        display: block
-        height: 100%
-        +tablet
-          transform: scale(1)
-        .layer
-          position: absolute
-          right: 0
-          img
-            margin: 0 0 auto auto
-            display: block
-            margin-top: 20%
-            +tablet
-              margin-top: 45%
-          +mobile
-            display: none
-        #layer-1
-          animation: layers-appear 0.5s ease-in-out both
-          animation-delay: 1.6s
-        #layer-2
-          animation: layers-appear 0.5s ease-in-out both
-          animation-delay: 1.3s
-        #layer-3
-          animation: layers-appear 0.5s ease-in-out both
-          animation-delay: 1s
+        +mobile
+          display: none
+      #try
+        margin-right: 0
+        margin-left: auto
+        max-width: 450px
+        position: relative
+        z-index: 1
+        margin-top: 50px
+        +mobile
+          margin: 40px auto
+          max-width: 300px
+        .new
+          font-size: $font-size-s
+          background-color: $blue
+          display: inline-block
+          padding: 4px 7px 2px
+          border-radius: 20px
+          font-weight: bold
+          text-transform: uppercase
+        h3
+          margin-top: 5px
+        .buttons
+          .button
+            +button($white)
+            background: $transparent
+            margin-right: 10px
+            margin: 5px 10px 5px 0
+            +event
+              color: $orange
+            +mobile
+              font-size: $font-size-xs
+            &:last-child
+              margin: 5px 0
   #featured
     background-image: linear-gradient(to right,$secondary-color, $orange)
     position: relative

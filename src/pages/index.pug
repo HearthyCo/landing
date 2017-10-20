@@ -52,16 +52,16 @@ html(lang="en")
                   span.tiny Bonus 
                 button.button Go to presale
           .item.right
-            #intro-layers
-              picture#layer-3.layer
-                source(srcset='/assets/images/intro-layers/layer-3.webp' + tag, type='image/webp')
-                img(src='/assets/images/intro-layers/layer-3.png' + tag, alt='intro image layer 3')
-              picture#layer-2.layer
-                source(srcset='/assets/images/intro-layers/layer-2.webp' + tag, type='image/webp')
-                img(src='/assets/images/intro-layers/layer-2.png' + tag, alt='intro image layer 2')
-              picture#layer-1.layer
-                source(srcset='/assets/images/intro-layers/layer-1.webp' + tag, type='image/webp')
-                img(src='/assets/images/intro-layers/layer-1.png' + tag, alt='intro image layer 1')
+            #intro-illustration
+              picture
+                source(srcset='/assets/images/intro-illustration.webp' + tag, type='image/webp')
+                img(src='/assets/images/intro-illustration.png' + tag, alt='intro image')
+            #try
+              .new New
+              h3 Do you wanna try the experience?
+              .buttons
+                a(href='https://client.demo.hearthy.co' , target='_blank').button Try demo as patient
+                a(href='https://professional.demo.hearthy.co' , target='_blank').button Try demo as physician
         .particles
           picture#intro-particle-1.particle
             source(srcset='/assets/images/particles/particle-1.webp' + tag, type='image/webp')
