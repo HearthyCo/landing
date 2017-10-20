@@ -13,18 +13,36 @@
     display: flex
     align-items: center
     justify-content: space-between
-  .button
-    font-size: $font-size-s
+  .download
+    flex: 1 1 auto
+    text-align: right
+    padding: 0 15px 0 0
+    font-weight: bold
     +mobile
-      font-size: $font-size-xs
+      padding: 0
+    a, img
+      vertical-align: middle
+      color: $base-font-color
+    +tablet
+      font-size: $font-size-s
+    +mobile
+      font-size: $font-size-s
+    img
+      margin-left: 7px
+      margin-bottom: 5px
+      padding: 2px
+      border-radius: 100%
+      +bg-color-hover($orange)
+      +size(30px)
   .logo
-    flex: 0 0 300px
+    flex: 0 0 210px
     img
       vertical-align: middle
     +mobile
-      max-width: 120px
+      max-width: 130px
   .talk
-    flex: 0 0 300px
+    flex: 0 0 210px
+    text-align: right
     +mobile
       position: fixed
       bottom: 0
@@ -34,24 +52,23 @@
       display: inline-block
       text-align: center
       vertical-align: middle
-      +desktop
-        min-width: 60px
+      max-width: 40px
       +mobile
         margin: 0
       .text
         font-size: $font-size-xs
         +color-hover($base-font-color)
         display: none
-        +desktop
-          display: block
-          margin-top: -3px
+        // +desktop
+        //   display: block
+        //   margin-top: -3px
       .icon
         background-color: tint($cyan, 30%)
         border-radius: 100%
         margin: auto
+        color: $white
         +event
           background-color: $cyan
-        color: $white
         +tablet
           margin: auto 5px
         +mobile
