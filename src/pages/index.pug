@@ -184,9 +184,9 @@ html(lang="en")
                   source(srcset='/assets/images/hearthybot.webp' + tag, type='image/webp')
                   img(src='/assets/images/hearthybot.png' + tag, alt='hearthybot')
               .item.right
-                h2 Hearthybot
-                p Hearthybot is a tiny chatbot, the most basic automated agent in our ecosystem who helps in registering and organizing medical appointments. It's a very early release and its functions are still in development.
-                .soon Coming soon
+                h2 Hearthyapp Patient side
+                p This is a mobile client for the Hearthyapp. It allows patients to store medical data, create appointment, be up to date with their medication and pay for telemedicine services
+                a(href='https://client.demo.hearthy.co' , target='_blank').button Try demo as patient
         #hearthy-app.section
           .container
             .split
@@ -195,9 +195,22 @@ html(lang="en")
                   source(srcset='/assets/images/hearthyapp.webp' + tag, type='image/webp')
                   img(src='/assets/images/hearthyapp.png' + tag, alt='hearthyapp')
               .item.right
-                h2 Hearthyapp
-                p With this app, patients and doctors can make online consultations, share photos and videos and create health milestones in their PHR.
-                .soon Coming soon
+                h2 Hearthyapp Physician side
+                p This a desktop client for the professional, here doctors can talk to patients, prescribe medication, review medical images… for access the platform please use these credentials:
+                .credentials
+                  .user
+                    strong User: 
+                    span fernando@hearthyapp.com
+                  .pass
+                    strong Pass: 
+                    span demo
+                a(href='https://professional.demo.hearthy.co' , target='_blank').button Try demo as physician
+        .disclaimer
+          p
+            div
+              img(src='/assets/images/icon-info.png' + tag, alt='icon info')
+              strong Disclaimer: 
+            .text This is an alpha version, still nor connected to the testnet. There is not real physicians on this version of the app, so all data, interactions and users are for demonstration.
       section#roadmap
         .roadmap-intro
           .container

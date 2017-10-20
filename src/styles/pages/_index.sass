@@ -434,6 +434,10 @@ $featured-height: 1.5 * $nav-height
         left: 50%
         margin-left: -70px
   #apps
+    .button
+      background-image: linear-gradient(to right, $secondary-color, $orange)
+      +event
+        background-image: linear-gradient(to right, darken($secondary-color, 5%), darken($orange, 5%))
     .apps-intro
       text-align: center
       padding: 40px 0
@@ -470,6 +474,14 @@ $featured-height: 1.5 * $nav-height
           +mobile
             opacity: 1
             transform: translateX(0)
+      .credentials
+        background-color: shade($light-yellow, 3%)
+        padding: 15px 20px
+        margin: 30px 0
+        border-radius: 10px
+        max-width: $tablet-width / 2.5
+        strong
+          color: $pink
       .soon
         box-sizing: border-box
         border-radius: $base-border-radius * 10
@@ -485,6 +497,20 @@ $featured-height: 1.5 * $nav-height
         padding: 10px 0 20px
     #hearthy-bot
       background-color: $light-yellow
+    .disclaimer
+      font-size: $font-size-xs
+      text-align: center
+      max-width: $tablet-width / 1.5
+      margin: auto
+      padding: 20px
+      div
+        margin-bottom: 15px
+        strong
+          color: $pink
+          vertical-align: middle
+        img
+          vertical-align: middle
+          margin-bottom: 5px
   #roadmap
     .roadmap-intro
       background-image: linear-gradient(to left,$orange, $secondary-color)
