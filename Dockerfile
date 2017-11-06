@@ -24,6 +24,12 @@ RUN npm install
 
 COPY . /app
 
+ARG URL_ZOHO=https://api.hearthy.co
+
+ENV URL_ZOHO ${URL_ZOHO}
+
+RUN echo $URL_ZOHO
+
 WORKDIR /app
 RUN gulp build
 
