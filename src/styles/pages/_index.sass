@@ -45,15 +45,14 @@ $featured-height: 1.5 * $nav-height
         opacity: 0.25
     .split
       position: relative
-    .presale
+    .closed-presale
       margin-top: 40px
       background-color: $yellow
-      padding: 10px 20px 20px
+      padding: 20px
       border-radius: 25px
       text-align: center
       max-width: 320px
       display: block
-      color: $white
       +mobile
         margin: auto
       +mobilescreen
@@ -62,12 +61,19 @@ $featured-height: 1.5 * $nav-height
       .presale-link
         text-align: left
         display: inline-block
-        padding: 10px 0
         @extend %font-size-l
+        .closed
+          color: $white
+        strong
+          margin: 0 4px
+        .tiny
+          font-size: $font-size-s
+          margin: 10px 0
         a
-          @extend %font-size-xl
           text-align: left
           display: block
+          cursor: pointer
+
       .button
         background-image: linear-gradient(to right, $secondary-color, $orange)
         +event
