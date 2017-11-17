@@ -1,0 +1,77 @@
+#presale-contract
+  #content-page
+    text-align: center
+    padding: 50px 0
+    background-image: linear-gradient(to left,$secondary-color, $primary-color)
+    color: $white
+    font-size: $font-size-xxl
+    position: relative
+    .coins
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      pointer-events: none
+      +tablet
+        display: none
+      +mobile
+        display: none
+      #coin-1
+        max-width: 250px
+      #coin-2
+        right: 0
+        max-width: 250px
+      #coin-3
+        bottom: -15px
+        max-width: 250px
+      .coin
+        position: absolute
+    .container
+      position: relative
+    +mobile
+      font-size: $font-size-l
+    .adress
+      font-size: $font-size-xxxl
+      margin-bottom: 2%
+      display: inline-block
+      +mobile
+        font-size: $font-size-xl
+    picture
+      display: block
+      margin: auto
+      max-width: 40%
+      +desktop
+        max-width: 70%
+      +tabletscreen
+        max-width: 25%
+      +mobile
+        max-width: 85%
+    .logo img
+      width: 100%
+      max-width: 400px
+    #code
+      text-transform: uppercase
+      margin-top: 2%
+      border: none
+      display: inline-block
+      padding: 0
+      text-align: center
+      word-break: break-word
+      color: $yellow
+      background-color: $transparent
+      max-width: 800px
+      vertical-align: middle
+      +mobile
+        font-size: $font-size-l
+    #copy-button
+      +button-gradient($secondary-color, $orange)
+      display: inline-block
+      font-size: $font-size-m
+      padding: 5px 10px
+      vertical-align: middle
+
+    .limit
+      font-weight: bold
+    strong
+      color: $yellow

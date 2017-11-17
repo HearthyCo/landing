@@ -1,0 +1,51 @@
+include ../components/header
+include ../components/footer
+include ../components/analytics
+
+doctype html
+html(lang="en")
+  head
+    title HearthyCo | Presale Contract
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(description='')
+
+    link(rel="shortcut icon", href="/assets/favicon.ico" + tag, type="image/x-icon")
+    link(href='style.css' + tag, rel='stylesheet')
+    script(src='main.js' + tag)
+    +analytics()
+  body#presale-contract.page
+    +header()
+    #content-page
+      .coins
+        picture#coin-1.coin
+          source(srcset='/assets/images/contract/coin-1.webp' + tag, type='image/webp')
+          img(src='/assets/images/contract/coin-1.png' + tag, alt='coin')
+        picture#coin-2.coin
+          source(srcset='/assets/images/contract/coin-2.webp' + tag, type='image/webp')
+          img(src='/assets/images/contract/coin-2.png' + tag, alt='coin')
+        picture#coin-3.coin
+          source(srcset='/assets/images/contract/coin-3.webp' + tag, type='image/webp')
+          img(src='/assets/images/contract/coin-3.png' + tag, alt='coin')
+      .container
+        picture.logo
+          source(srcset='/assets/images/logo2.svg' + tag, type='image/svg+xml')
+          img(src='/assets/images/logo2.png' + tag, alt='logo')
+        p Please deposit ETH only to the following adress:
+        picture
+          source(srcset='/assets/images/contract/qr.webp' + tag, type='image/webp')
+          img(src='/assets/images/contract/qr.png' + tag, alt='contract qr image')
+        div
+          input#code(type='text', value='0x60e4ECd11Ff8E81B4b2EBF938288634aC3DB517e', readonly='')
+          #copy-button.button copy
+        p.limit Gas limit: 200000
+        p
+          span Make sure that you send Ether from a wallet that supports 
+          strong ERC20 
+          span tokens or from an adress for which you control the private key.
+        p
+          span Oterwise you will not be able interact with the 
+          strong EHR tokens 
+          span received. Do not send ETH directly from a exchange to the ICO adress.
+    +footer()

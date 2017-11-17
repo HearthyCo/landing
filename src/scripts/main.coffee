@@ -4,6 +4,7 @@ require './toggler'
 # require './newsletter'
 require './presaleForm'
 require './acceptZoho'
+require './copyClipboard'
 
 # Save URL parameters to the localStorage so they are available at the form.
 if window.location.search.length
