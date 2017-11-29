@@ -29,29 +29,27 @@ html(lang="en")
             h1 
               strong Join us in the 
               span future healthcare
-            h3 Hearthy Presale 2nd Phase is open, to join just send us your contact details, our team will contact you in the follow 24/48 h. For any inquieres contact us on 
+            h3 
+              span Hearthy Presale 
+              strong 2nd Phase is open, 
+              span to join just send us your contact details, our team will contact you in the follow 24/48 h. For any inquieres contact us on 
               a(href='mailto:support@hearthy.com') support@hearthy.co
       form#whitelist(action=urlZoho, method='POST')
         section#required
           .container
             h4 Required Fields
             .inputs
-              input(type='text', placeholder='Your name...', name='Hearthyco-Landing Name', required)
-              input(type='email', placeholder='Your email...', name='Email', required)
-              input(type='number', placeholder='Amount of ETH...', step='.01',min='0', max='10000', name='eth', required)#amount
+              label
+                input(type='text', placeholder='Your name...', name='Hearthyco-Landing Name', required)
+              label
+                input(type='email', placeholder='Your email...', name='Email', required)
         section#optional
           .container
-            h4 Optional Fields
             .inputs
               label
-                span.icon.icon-eth2
-                input(type='text', placeholder='Your public Ethereum adress...', name='ethereum-adress')#ethereum-adress
+                input(type='text', placeholder='Your public Ethereum adress...', name='ethereum-adress', required)#ethereum-adress
               label
-                span.icon.icon-linkedin2
-                input(type='text', placeholder='Your linkedin...', name='linkedin')
-              label
-                span.icon.icon-twitter2
-                input(type='text', placeholder='Your twitter...', name='twitter')
+                input(type='number', placeholder='Amount of ETH...', step='.01',min='0', max='10000', name='eth', required)#amount
         section#final
           .container
             input(type='hidden', name='params', value='')
