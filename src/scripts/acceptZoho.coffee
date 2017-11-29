@@ -15,7 +15,7 @@ document.addEventListener 'DOMContentLoaded', ->
     .then (req)->
       if req.status isnt 200
         throw new Error('Unexpected status')
-      window.location.href = '/greetings'
+      window.location.href = '/presale-contract'
 
   cancelButton = document.getElementById('cancel-button')
   cancelButton.addEventListener 'click', toggleModal
