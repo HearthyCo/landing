@@ -6,5 +6,6 @@ document.addEventListener 'DOMContentLoaded', ->
     document.execCommand 'Copy'
     alert 'Copied the text: ' + copyText.value
     return
-  copyButton.addEventListener 'touchstart', copyClipboard
-  copyButton.addEventListener 'click', copyClipboard
+  if copyButton
+    copyButton.addEventListener 'touchstart', copyClipboard
+    copyButton.addEventListener 'click', copyClipboard
